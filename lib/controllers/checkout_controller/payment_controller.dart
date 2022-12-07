@@ -12,7 +12,7 @@ class PaymentController extends GetxController {
   String value = "";
   bool expand = false;
   int? tapped = 0;
-  String walletSelectedValue ="Choose Bank...";
+  String walletSelectedValue = "Choose Bank...";
 
   //bank list
   var bankList = [
@@ -20,7 +20,6 @@ class PaymentController extends GetxController {
     "ICICI",
     "BOB",
   ];
-
 
   TextEditingController txtCardName = TextEditingController();
   TextEditingController txtCardNo = TextEditingController();

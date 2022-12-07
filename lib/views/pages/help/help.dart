@@ -9,10 +9,10 @@ class Help extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HelpController>(builder: (_) {
       return Directionality(
-        textDirection: helpCtrl.appCtrl.isRTL ||
-            helpCtrl.appCtrl.languageVal == "ar"
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection:
+            helpCtrl.appCtrl.isRTL || helpCtrl.appCtrl.languageVal == "ar"
+                ? TextDirection.rtl
+                : TextDirection.ltr,
         child: Scaffold(
           appBar: AppBar(
             centerTitle: false,

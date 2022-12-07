@@ -1,5 +1,3 @@
-
-
 import '../../../config.dart';
 
 class TermsAndCondition extends StatelessWidget {
@@ -10,9 +8,9 @@ class TermsAndCondition extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<TermsAndConditionController>(builder: (_) {
-      return  Directionality(
+      return Directionality(
         textDirection: termsConditionCtrl.appCtrl.isRTL ||
-            termsConditionCtrl.appCtrl.languageVal == "ar"
+                termsConditionCtrl.appCtrl.languageVal == "ar"
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: Scaffold(
@@ -29,9 +27,10 @@ class TermsAndCondition extends StatelessWidget {
             ),
           ),
           bottomNavigationBar:
-          GetBuilder<DashboardController>(builder: (dashboardCtrl) {
+              GetBuilder<DashboardController>(builder: (dashboardCtrl) {
             return CommonBottomNavigation(
-              onTap: (val) => dashboardCtrl.bottomNavigationChange(val, context),
+              onTap: (val) =>
+                  dashboardCtrl.bottomNavigationChange(val, context),
             );
           }),
           body: SingleChildScrollView(
@@ -40,7 +39,8 @@ class TermsAndCondition extends StatelessWidget {
               children: [
                 //terms & condition text layout
                 TermsConditionWidget().commonText(
-                    CommonTextFont().termsConditionForMultikart, FontWeight.w700),
+                    CommonTextFont().termsConditionForMultikart,
+                    FontWeight.w700),
                 const Space(0, 20),
 
                 //terms & condition list

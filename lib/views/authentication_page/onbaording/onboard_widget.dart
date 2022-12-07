@@ -25,5 +25,4 @@ class OnBoardWidget {
         .textAlignment(TextAlign.center)
         .textDecoration(textDecoration);
   }
-
 }

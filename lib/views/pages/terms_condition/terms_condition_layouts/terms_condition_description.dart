@@ -28,8 +28,7 @@ class TermsConditionDescription extends StatelessWidget {
                   ),
                   const Space(10, 0),
                   Expanded(
-                    child: TermsConditionWidget()
-                        .commonSubTitle(e.title),
+                    child: TermsConditionWidget().commonSubTitle(e.title),
                   ),
                 ],
               );

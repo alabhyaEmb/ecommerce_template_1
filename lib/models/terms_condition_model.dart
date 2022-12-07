@@ -1,5 +1,3 @@
-
-
 class TermsAndConditionModel {
   String? title;
   List<Description>? description;
@@ -29,7 +27,7 @@ class TermsAndConditionModel {
 class Description {
   String? title;
   List<SubTitle>? subTitle;
-  Description({this.title,this.subTitle});
+  Description({this.title, this.subTitle});
 
   Description.fromJson(Map<String, dynamic> json) {
     title = json['title'];

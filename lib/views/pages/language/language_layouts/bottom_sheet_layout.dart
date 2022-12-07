@@ -2,7 +2,7 @@ import '../../../../config.dart';
 
 class BottomSheetLayout extends StatelessWidget {
   final Widget? child;
-  const BottomSheetLayout({Key? key,this.child}) : super(key: key);
+  const BottomSheetLayout({Key? key, this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -10,12 +10,13 @@ class Reviews {
 
   Reviews(
       {this.name,
-        this.description,
-        this.date,
-        this.rating,
-        this.size,
-        this.like,
-        this.disLike,this.image});
+      this.description,
+      this.date,
+      this.rating,
+      this.size,
+      this.like,
+      this.disLike,
+      this.image});
 
   Reviews.fromJson(Map<String, dynamic> json) {
     name = json['name'];

@@ -1,4 +1,3 @@
-
 import 'package:multikart/config.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -63,7 +62,6 @@ class CustomTextFormField extends StatelessWidget {
     this.showBoarder = true,
     this.suffixIconConstraints,
     this.textAlignVertical = TextAlignVertical.center,
-
     this.focusNode,
     this.hintStyle,
   }) : super(key: key);
@@ -71,7 +69,8 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     InputBorder inputBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(radius ?? 12)),
+      borderRadius:
+          BorderRadius.circular(AppScreenUtil().borderRadius(radius ?? 12)),
       borderSide: BorderSide(
           style: BorderStyle.solid, color: appCtrl.appTheme.borderColor),
     );
@@ -102,14 +101,22 @@ class CustomTextFormField extends StatelessWidget {
           suffixIconConstraints: suffixIconConstraints,
           errorBorder: inputBorder,
           focusedErrorBorder: inputBorder,
-          labelStyle: TextStyle(color: appCtrl.appTheme.contentColor,fontSize: AppScreenUtil().fontSize(16),letterSpacing: .4),
+          labelStyle: TextStyle(
+              color: appCtrl.appTheme.contentColor,
+              fontSize: AppScreenUtil().fontSize(16),
+              letterSpacing: .4),
           filled: true,
           fillColor: fillColor ?? appCtrl.appTheme.bg1,
-          contentPadding: EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(20),vertical: AppScreenUtil().screenHeight(0)),
+          contentPadding: EdgeInsets.symmetric(
+              horizontal: AppScreenUtil().screenWidth(20),
+              vertical: AppScreenUtil().screenHeight(0)),
           hintText: hintText,
           labelText: labelText,
           errorText: errorText,
-          hintStyle: TextStyle(color: appCtrl.appTheme.contentColor,fontSize: AppScreenUtil().fontSize(16),letterSpacing: .4),
+          hintStyle: TextStyle(
+              color: appCtrl.appTheme.contentColor,
+              fontSize: AppScreenUtil().fontSize(16),
+              letterSpacing: .4),
           errorMaxLines: 2,
           counterText: showCounter ? null : '',
           suffixIcon: suffixIcon,

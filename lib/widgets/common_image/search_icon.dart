@@ -5,18 +5,16 @@ class SearchIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return SvgPicture.asset(
-          svgAssets.search,
-          color: appCtrl.appTheme.blackColor,
-        ).gestures(onTap: (){
-          appCtrl.selectedIndex =1;
-          appCtrl.update();
-          Get.forceAppUpdate();
-          Get.toNamed(routeName.search);
-        });
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return SvgPicture.asset(
+        svgAssets.search,
+        color: appCtrl.appTheme.blackColor,
+      ).gestures(onTap: () {
+        appCtrl.selectedIndex = 1;
+        appCtrl.update();
+        Get.forceAppUpdate();
+        Get.toNamed(routeName.search);
+      });
+    });
   }
 }

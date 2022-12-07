@@ -36,9 +36,12 @@ class ImageAssets {
   final String banner2 = 'assets/home_images/home_banner/banner2.jpeg';
 
   //home deal of the day
-  final String dealOfTheDay1 = 'assets/home_images/home_deals/dealOfTheDay1.png';
-  final String dealOfTheDay2 = 'assets/home_images/home_deals/dealOfTheDay2.jpeg';
-  final String dealOfTheDay3 = 'assets/home_images/home_deals/dealOfTheDay3.png';
+  final String dealOfTheDay1 =
+      'assets/home_images/home_deals/dealOfTheDay1.png';
+  final String dealOfTheDay2 =
+      'assets/home_images/home_deals/dealOfTheDay2.jpeg';
+  final String dealOfTheDay3 =
+      'assets/home_images/home_deals/dealOfTheDay3.png';
 
   //home find style
   final String findStyle1 = 'assets/home_images/find_style/findStyle1.png';
@@ -48,15 +51,24 @@ class ImageAssets {
   final String findStyle5 = 'assets/home_images/find_style/findStyle5.jpg';
 
   //home biggest deal
-  final String biggestDeal1 = 'assets/home_images/biggest_deal/biggestDeal1.png';
-  final String biggestDeal2 = 'assets/home_images/biggest_deal/biggestDeal2.png';
-  final String biggestDeal3 = 'assets/home_images/biggest_deal/biggestDeal3.png';
-  final String biggestDeal4 = 'assets/home_images/biggest_deal/biggestDeal4.png';
-  final String biggestDeal5 = 'assets/home_images/biggest_deal/biggestDeal5.png';
-  final String biggestDeal6 = 'assets/home_images/biggest_deal/biggestDeal6.png';
-  final String biggestDeal7 = 'assets/home_images/biggest_deal/biggestDeal7.png';
-  final String biggestDeal8 = 'assets/home_images/biggest_deal/biggestDeal8.png';
-  final String biggestDeal9 = 'assets/home_images/biggest_deal/biggestDeal9.png';
+  final String biggestDeal1 =
+      'assets/home_images/biggest_deal/biggestDeal1.png';
+  final String biggestDeal2 =
+      'assets/home_images/biggest_deal/biggestDeal2.png';
+  final String biggestDeal3 =
+      'assets/home_images/biggest_deal/biggestDeal3.png';
+  final String biggestDeal4 =
+      'assets/home_images/biggest_deal/biggestDeal4.png';
+  final String biggestDeal5 =
+      'assets/home_images/biggest_deal/biggestDeal5.png';
+  final String biggestDeal6 =
+      'assets/home_images/biggest_deal/biggestDeal6.png';
+  final String biggestDeal7 =
+      'assets/home_images/biggest_deal/biggestDeal7.png';
+  final String biggestDeal8 =
+      'assets/home_images/biggest_deal/biggestDeal8.png';
+  final String biggestDeal9 =
+      'assets/home_images/biggest_deal/biggestDeal9.png';
 
   //home kids corner
   final String kidsCorner1 = 'assets/home_images/kids_corner/kidsCorner1.jpeg';

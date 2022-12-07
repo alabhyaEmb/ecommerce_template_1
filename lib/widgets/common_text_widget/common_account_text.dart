@@ -7,13 +7,22 @@ class CommonAccountText extends StatelessWidget {
   final FontWeight? fontWeight;
   final GestureTapCallback? onTap;
   final bool isCenter;
-  const CommonAccountText({Key? key,this.text1,this.text2,this.textColor,this.fontWeight,this.onTap,this.isCenter = true}) : super(key: key);
+  const CommonAccountText(
+      {Key? key,
+      this.text1,
+      this.text2,
+      this.textColor,
+      this.fontWeight,
+      this.onTap,
+      this.isCenter = true})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<AppController>(builder: (appCtrl) {
       return Row(
-        mainAxisAlignment: isCenter?  MainAxisAlignment.center: MainAxisAlignment.start,
+        mainAxisAlignment:
+            isCenter ? MainAxisAlignment.center : MainAxisAlignment.start,
         children: [
           OnBoardWidget().textLayout(
               text: text1,
@@ -27,7 +36,7 @@ class CommonAccountText extends StatelessWidget {
               fontSize: 14,
               fontWeight: fontWeight!,
               color: textColor,
-              onTap:onTap ,
+              onTap: onTap,
               textDecoration: TextDecoration.underline)
         ],
       );

@@ -10,7 +10,7 @@ class SaveAddressController extends GetxController {
   DeliveryDetailModel? deliveryDetail;
 
   //select address
-  selectAddress(val,index){
+  selectAddress(val, index) {
     value = val.name!;
     selectRadio = index;
     update();

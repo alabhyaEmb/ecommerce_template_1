@@ -20,7 +20,6 @@ class ExpandableListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: <Widget>[
         InkWell(
@@ -45,7 +44,13 @@ class ExpandableListView extends StatelessWidget {
         ),
         ChildExpandable(
             collapsedHeight: 0.0,
-            expandedHeight:childLength! >= 10 ? 330 : childLength! >= 5 ? 180 : childLength! <= 3 ? 150 :200,
+            expandedHeight: childLength! >= 10
+                ? 330
+                : childLength! >= 5
+                    ? 180
+                    : childLength! <= 3
+                        ? 150
+                        : 200,
             expanded: isExpanded,
             child: child)
       ],

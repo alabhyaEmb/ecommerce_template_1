@@ -24,11 +24,14 @@ class BrandCard extends StatelessWidget {
             horizontal: AppScreenUtil().screenWidth(15),
           ),
           margin: EdgeInsets.only(
-              left: AppScreenUtil().screenWidth(appCtrl.isRTL ||
-                  appCtrl.languageVal == "ar"
-                  ?  0 :15),
-              right: AppScreenUtil().screenWidth(appCtrl.isRTL ||
-                  appCtrl.languageVal == "ar" ? 15:  index == 2 || index == 5?15 :0),
+              left: AppScreenUtil().screenWidth(
+                  appCtrl.isRTL || appCtrl.languageVal == "ar" ? 0 : 15),
+              right: AppScreenUtil()
+                  .screenWidth(appCtrl.isRTL || appCtrl.languageVal == "ar"
+                      ? 15
+                      : index == 2 || index == 5
+                          ? 15
+                          : 0),
               top: AppScreenUtil().screenHeight(10),
               bottom: AppScreenUtil().screenHeight(10)),
           decoration: BoxDecoration(

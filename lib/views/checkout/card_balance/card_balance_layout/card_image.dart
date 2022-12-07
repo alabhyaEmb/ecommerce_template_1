@@ -17,7 +17,7 @@ class CardImage extends StatelessWidget {
             borderRadius:
                 BorderRadius.circular(AppScreenUtil().borderRadius(12)),
             child: Image.asset(
-          image!,
+              image!,
               color: Colors.grey[200],
               colorBlendMode: BlendMode.softLight,
             ).marginOnly(

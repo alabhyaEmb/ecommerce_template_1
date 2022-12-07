@@ -8,13 +8,18 @@ class DealsOfTheDayContent extends StatelessWidget {
   final bool isActionShow;
   final GestureTapCallback? firstActionTap;
   final GestureTapCallback? secondActionTap;
-  const DealsOfTheDayContent({Key? key, this.data, this.isVariantsShow = false,this.isActionShow = false,this.firstActionTap,this.secondActionTap})
+  const DealsOfTheDayContent(
+      {Key? key,
+      this.data,
+      this.isVariantsShow = false,
+      this.isActionShow = false,
+      this.firstActionTap,
+      this.secondActionTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<AppController>(builder: (appCtrl) {
-
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -35,13 +40,15 @@ class DealsOfTheDayContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               LatoFontStyle(
-                  text: '${appCtrl.priceSymbol} ${(data!.mrp! * appCtrl.rateValue)}',
+                  text:
+                      '${appCtrl.priceSymbol} ${(data!.mrp! * appCtrl.rateValue)}',
                   fontWeight: FontWeight.w400,
                   color: appCtrl.appTheme.blackColor,
                   fontSize: FontSizes.f13),
               const Space(8, 0),
               LatoFontStyle(
-                  text:'${appCtrl.priceSymbol} ${(data!.totalPrice! * appCtrl.rateValue).toStringAsFixed(2)}',
+                  text:
+                      '${appCtrl.priceSymbol} ${(data!.totalPrice! * appCtrl.rateValue).toStringAsFixed(2)}',
                   fontWeight: FontWeight.w400,
                   color: appCtrl.appTheme.contentColor,
                   fontSize: FontSizes.f13,
@@ -55,9 +62,16 @@ class DealsOfTheDayContent extends StatelessWidget {
             ],
           ),
           const Space(0, 10),
-          if (isVariantsShow)  Variants(firstActionTap: firstActionTap,secondActionTap: secondActionTap,),
+          if (isVariantsShow)
+            Variants(
+              firstActionTap: firstActionTap,
+              secondActionTap: secondActionTap,
+            ),
           if (isActionShow)
-             WishListAction(firstActionTap: firstActionTap,secondActionTap: secondActionTap,)
+            WishListAction(
+              firstActionTap: firstActionTap,
+              secondActionTap: secondActionTap,
+            )
         ],
       );
     });

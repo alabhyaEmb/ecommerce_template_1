@@ -1,14 +1,14 @@
 import 'package:get/get.dart';
 
-class CommonTextFont{
-  String startShopping= 'startShopping'.tr;
+class CommonTextFont {
+  String startShopping = 'startShopping'.tr;
   String alreadyAccount = 'alreadyAccount'.tr;
   String ifYouAreNew = 'ifYouAreNew'.tr;
   String createNow = 'createNow'.tr;
   String signIn = 'signIn'.tr;
   String skip = 'skip'.tr;
-  String password= 'password'.tr;
-  String orSignWith= 'orSignWith'.tr;
+  String password = 'password'.tr;
+  String orSignWith = 'orSignWith'.tr;
   String userFieldError = "userFieldError".tr;
   String passwordFieldError = "passwordFieldError".tr;
   String currentPasswordFieldError = "currentPasswordFieldError".tr;
@@ -43,7 +43,4 @@ class CommonTextFont{
   String on = "on".tr;
   String yes = "yes".tr;
   String no = "no".tr;
-
-
 }
-

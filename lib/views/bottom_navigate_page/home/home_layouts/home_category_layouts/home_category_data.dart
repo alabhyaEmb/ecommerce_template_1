@@ -1,7 +1,9 @@
+import 'package:multikart/models/category_new_model.dart';
+
 import '../../../../../config.dart';
 
 class HomeCategoryData extends StatelessWidget {
-  final HomeCategoryModel? data;
+  final CategoryNewModel? data;
   final int? index;
 
   const HomeCategoryData({Key? key, this.data, this.index}) : super(key: key);
@@ -10,20 +12,22 @@ class HomeCategoryData extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (homeCtrl) {
       return InkWell(
-        onTap: () async {
-          homeCtrl.appCtrl.isHeart = true;
-          homeCtrl.appCtrl.isCart = true;
-          homeCtrl.appCtrl.isShare = false;
-          homeCtrl.appCtrl.isSearch = false;
-          homeCtrl.appCtrl.isNotification = false;
-          homeCtrl.appCtrl.selectedIndex = 1;
-          homeCtrl.appCtrl.update();
-          homeCtrl.appCtrl.isShimmer = true;
-          homeCtrl.update();
-          await Future.delayed(Durations.s1);
-          homeCtrl.appCtrl.isShimmer = false;
-          homeCtrl.appCtrl.update();
-          Get.forceAppUpdate();
+        onTap: () {
+          // homeCtrl.appCtrl.isHeart = true;
+          // homeCtrl.appCtrl.isCart = true;
+          // homeCtrl.appCtrl.isShare = false;
+          // homeCtrl.appCtrl.isSearch = false;
+          // homeCtrl.appCtrl.isNotification = false;
+          // homeCtrl.appCtrl.selectedIndex = 1;
+          // homeCtrl.appCtrl.update();
+          // homeCtrl.appCtrl.isShimmer = true;
+          // homeCtrl.update();
+          // await Future.delayed(Durations.s1);
+          // homeCtrl.appCtrl.isShimmer = false;
+          // homeCtrl.appCtrl.update();
+          // Get.forceAppUpdate();
+          Get.toNamed(routeName.shopPage,
+              arguments: {'name': data!.name, 'id': data!.id});
         },
         child: Padding(
           padding: EdgeInsets.only(
@@ -31,35 +35,21 @@ class HomeCategoryData extends StatelessWidget {
               left: AppScreenUtil().screenWidth(index == 0 ? 10 : 0)),
           child: Column(
             children: [
-              SizedBox(
-                height: AppScreenUtil().screenHeight(70),
-                child: Stack(
-                  alignment: Alignment.topCenter,
-                  children: [
-                    Container(
-                      width: AppScreenUtil().screenWidth(55),
-                      decoration: BoxDecoration(
-                        color: homeCtrl.appCtrl.appTheme.homeCategoryColor,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                    Positioned(
-                      top: MediaQuery.of(context).size.width > 400
-                          ? MediaQuery.of(context).size.height / 100
-                          : MediaQuery.of(context).size.width < 380
-                              ? 5
-                              : 0,
-                      child: FadeInImageLayout(
-                          image: data!.image.toString(),
-                          height: AppScreenUtil().screenHeight(60),
-                          width: AppScreenUtil().screenWidth(60),
-                          fit: BoxFit.fill),
-                    ),
-                  ],
+              Container(
+                clipBehavior: Clip.hardEdge,
+                width: AppScreenUtil().screenWidth(60),
+                height: AppScreenUtil().screenHeight(60),
+                decoration: BoxDecoration(
+                  color: homeCtrl.appCtrl.appTheme.homeCategoryColor,
+                  shape: BoxShape.circle,
                 ),
+                child: data!.image!.src == null
+                    ? const Center(child: Text('No Image'))
+                    : Image.network(data!.image!.src.toString(),
+                        fit: BoxFit.cover),
               ),
               LatoFontStyle(
-                text: data!.title,
+                text: data!.name,
                 fontWeight: FontWeight.w600,
                 fontSize: FontSizes.f12,
               )

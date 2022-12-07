@@ -1,7 +1,5 @@
 import '../config.dart';
 
-
-
 class DeliveryDetailModel {
   List<AddressList>? addressList;
   List<ExpectedDelivery>? expectedDelivery;

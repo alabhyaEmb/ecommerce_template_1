@@ -7,7 +7,8 @@ class ColorLayout extends StatefulWidget {
   State<ColorLayout> createState() => _ColorLayoutState();
 }
 
-class _ColorLayoutState extends State<ColorLayout>with TickerProviderStateMixin {
+class _ColorLayoutState extends State<ColorLayout>
+    with TickerProviderStateMixin {
   AnimationController? _animationController;
   Animation<double>? _animation;
 
@@ -23,45 +24,41 @@ class _ColorLayoutState extends State<ColorLayout>with TickerProviderStateMixin 
 
     _animationController!.reset();
     _animationController!.forward();
-    
   }
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<FilterController>(
-      builder: (filterCtrl) {
-        return Wrap(
-          children: [
-            ...filterCtrl.colorList.asMap().entries.map((e) {
-              return Container(
-                margin: EdgeInsets.only(
-                    right: AppScreenUtil().screenWidth(10),
-                    top: AppScreenUtil().screenHeight(10)),
-                height: AppScreenUtil().screenHeight(32),
-                width: AppScreenUtil().screenWidth(35),
-                decoration: BoxDecoration(
-                    color: e.value['color'],
-                    shape: BoxShape.circle),
-                child: Container(
-                    padding: EdgeInsets.all(AppScreenUtil().size(8)),
-                    child: filterCtrl.selectedColor == e.key
-                        ? AnimatedCheck(
-                      progress: _animation!,
-                      color: filterCtrl.appCtrl.appTheme.blackColor,
-                      size: 40,
-                      strokeWidth: 1.2,
-                    )
-                        : Container()),
-              ).gestures(onTap: () {
-                _animationController!.reset();
-                _animationController!.forward();
-                filterCtrl.selectedColor = e.key;
-                filterCtrl.update();
-              });
-            }).toList()
-          ],
-        ).marginOnly(bottom: AppScreenUtil().screenHeight(50));
-      }
-    );
+    return GetBuilder<FilterController>(builder: (filterCtrl) {
+      return Wrap(
+        children: [
+          ...filterCtrl.colorList.asMap().entries.map((e) {
+            return Container(
+              margin: EdgeInsets.only(
+                  right: AppScreenUtil().screenWidth(10),
+                  top: AppScreenUtil().screenHeight(10)),
+              height: AppScreenUtil().screenHeight(32),
+              width: AppScreenUtil().screenWidth(35),
+              decoration: BoxDecoration(
+                  color: e.value['color'], shape: BoxShape.circle),
+              child: Container(
+                  padding: EdgeInsets.all(AppScreenUtil().size(8)),
+                  child: filterCtrl.selectedColor == e.key
+                      ? AnimatedCheck(
+                          progress: _animation!,
+                          color: filterCtrl.appCtrl.appTheme.blackColor,
+                          size: 40,
+                          strokeWidth: 1.2,
+                        )
+                      : Container()),
+            ).gestures(onTap: () {
+              _animationController!.reset();
+              _animationController!.forward();
+              filterCtrl.selectedColor = e.key;
+              filterCtrl.update();
+            });
+          }).toList()
+        ],
+      ).marginOnly(bottom: AppScreenUtil().screenHeight(50));
+    });
   }
 }

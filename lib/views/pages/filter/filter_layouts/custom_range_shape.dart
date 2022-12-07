@@ -26,14 +26,14 @@ class CustomThumbShape implements RangeSliderThumbShape {
   @override
   void paint(PaintingContext context, Offset center,
       {required Animation<double> activationAnimation,
-        required Animation<double> enableAnimation,
-        bool? isDiscrete,
-        bool? isEnabled,
-        bool? isOnTop,
-        TextDirection? textDirection,
-        required SliderThemeData sliderTheme,
-        Thumb? thumb,
-        bool? isPressed}) {
+      required Animation<double> enableAnimation,
+      bool? isDiscrete,
+      bool? isEnabled,
+      bool? isOnTop,
+      TextDirection? textDirection,
+      required SliderThemeData sliderTheme,
+      Thumb? thumb,
+      bool? isPressed}) {
     final Canvas canvas = context.canvas;
     var paint1 = Paint()..color = appCtrl.appTheme.primary;
     var paint2 = Paint()

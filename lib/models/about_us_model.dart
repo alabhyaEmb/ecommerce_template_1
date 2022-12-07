@@ -10,11 +10,11 @@ class AboutUsModel {
 
   AboutUsModel(
       {this.title,
-        this.desc1,
-        this.desc2,
-        this.statistic,
-        this.desc3,
-        this.ourBrand});
+      this.desc1,
+      this.desc2,
+      this.statistic,
+      this.desc3,
+      this.ourBrand});
 
   AboutUsModel.fromJson(Map<String, dynamic> json) {
     title = json['title'];
@@ -43,4 +43,3 @@ class AboutUsModel {
     return data;
   }
 }
-

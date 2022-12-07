@@ -10,12 +10,12 @@ class DeliveryDetail extends StatelessWidget {
     return GetBuilder<DeliveryDetailController>(builder: (_) {
       return Directionality(
         textDirection: deliveryDetailCtrl.appCtrl.isRTL ||
-            deliveryDetailCtrl.appCtrl.languageVal == "ar"
+                deliveryDetailCtrl.appCtrl.languageVal == "ar"
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: Scaffold(
           appBar: HomeProductAppBar(
-            onTap: ()=>Get.back(),
+            onTap: () => Get.back(),
             titleChild: CommonAppBarTitle(
               title: DeliveryDetailFont().deliveryDetails,
               desc: DeliveryDetailFont().steps2Of3,

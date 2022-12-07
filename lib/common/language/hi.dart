@@ -601,7 +601,8 @@ final dynamic hi = {
   "Find Products, Banner, Sale": "उत्पाद, बैनर, बिक्री खोजें",
   "Cart, Order & Payment": "कार्ट, ऑर्डर और भुगतान",
   "Add your Products & Placed Order": "अपने उत्पाद जोड़ें और ऑर्डर दिया",
-  "Check Order History, tracking pages..": "ऑर्डर हिस्ट्री, ट्रैकिंग पेज चेक करें।",
+  "Check Order History, tracking pages..":
+      "ऑर्डर हिस्ट्री, ट्रैकिंग पेज चेक करें।",
   "deliveryBy": "के द्वारा डिलिवरी",
   "off": "बंद",
   "ratings": "रेटिंग्स",

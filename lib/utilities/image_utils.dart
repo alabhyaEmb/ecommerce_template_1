@@ -1,10 +1,7 @@
-
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:multikart/common/assets/index.dart';
 import 'package:multikart/widgets/common/image_preview.dart';
-
 
 Widget imageNetwork({
   required String url,

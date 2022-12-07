@@ -1,6 +1,5 @@
 import '../config.dart';
 
-
 class CartModel {
   List<HomeDealOfTheDayModel>? cartList;
   List<OrderDetail>? orderDetail;

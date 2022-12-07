@@ -5,7 +5,7 @@ class LoopShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: <Widget>[
         for (int i = 0; i < 3; i++)
           const DealCardShimmer()

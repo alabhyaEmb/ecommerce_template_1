@@ -15,7 +15,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
     return GetBuilder<CategoryController>(builder: (_) {
       return Directionality(
         textDirection: categoryCtrl.appCtrl.isRTL ||
-            categoryCtrl.appCtrl.languageVal == "ar"
+                categoryCtrl.appCtrl.languageVal == "ar"
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: Scaffold(
@@ -30,12 +30,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
                           categoryModel: categoryCtrl.categoryList[e.key],
                           index: e.key,
                           isEven: e.key.isEven,
-                          onTap: ()async {
+                          onTap: () async {
                             categoryCtrl.appCtrl.isShimmer = true;
                             categoryCtrl.appCtrl.update();
                             var data = {'data': e.value, 'index': e.key};
 
-                            Get.toNamed(routeName.innerCategory, arguments: data);
+                            Get.toNamed(routeName.innerCategory,
+                                arguments: data);
                             await Future.delayed(Durations.s1);
                             categoryCtrl.appCtrl.isShimmer = false;
                             categoryCtrl.appCtrl.update();

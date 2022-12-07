@@ -1,7 +1,7 @@
 import '../../../../config.dart';
 
 class PaymentExpandable extends StatelessWidget {
-  final int? index,selectRadio;
+  final int? index, selectRadio;
   final dynamic data;
   final bool? isExpanded;
   final VoidCallback? onPressed;
@@ -10,13 +10,13 @@ class PaymentExpandable extends StatelessWidget {
 
   const PaymentExpandable(
       {Key? key,
-        this.index,
-        this.selectRadio,
-        this.child,
-        this.data,
-        this.onPressed,
-        this.onTap,
-        this.isExpanded})
+      this.index,
+      this.selectRadio,
+      this.child,
+      this.data,
+      this.onPressed,
+      this.onTap,
+      this.isExpanded})
       : super(key: key);
 
   @override

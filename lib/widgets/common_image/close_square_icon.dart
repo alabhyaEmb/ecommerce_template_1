@@ -10,6 +10,8 @@ class CloseSquareIcon extends StatelessWidget {
       height: AppScreenUtil().size(25),
       width: AppScreenUtil().size(25),
       fit: BoxFit.contain,
-    ).marginOnly(right: AppScreenUtil().screenWidth(15)).gestures(onTap: ()=> Get.back());
+    )
+        .marginOnly(right: AppScreenUtil().screenWidth(15))
+        .gestures(onTap: () => Get.back());
   }
 }

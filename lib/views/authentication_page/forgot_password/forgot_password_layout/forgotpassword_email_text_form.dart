@@ -14,7 +14,6 @@ class ForgotPasswordEmailTextForm extends StatelessWidget {
           labelText: LoginFont().userNameOrEmail,
           controller: forgotPasswordCtrl.txtEmail,
           keyboardType: TextInputType.emailAddress,
-
           validator: (value) => CommonValidation().checkEmailValidation(value),
         ),
       );

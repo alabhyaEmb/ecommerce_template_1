@@ -12,8 +12,7 @@ class OrderHistoryWidget {
         child: Row(children: [
       Expanded(
           child: SearchTextBox(
-              controller: controller,
-              prefixIcon: SearchWidget().prefixIcon())),
+              controller: controller, prefixIcon: SearchWidget().prefixIcon())),
       const FilterIconLayout().gestures(onTap: onTap)
     ]));
   }
@@ -55,11 +54,11 @@ class OrderHistoryWidget {
   //filter layout
   Widget orderHistoryFilterTitle(title) {
     return LatoFontStyle(
-        text: title,
-        color: appCtrl.appTheme.blackColor,
-        fontWeight: FontWeight.w600)
+            text: title,
+            color: appCtrl.appTheme.blackColor,
+            fontWeight: FontWeight.w600)
         .marginOnly(
-        left: AppScreenUtil().screenWidth(20),
-        bottom: AppScreenUtil().screenHeight(10));
+            left: AppScreenUtil().screenWidth(20),
+            bottom: AppScreenUtil().screenHeight(10));
   }
 }

@@ -33,14 +33,15 @@ var cartList = CartModel(
     totalAmount: 270.00,
     deliveryChargesInstruction: [
       DeliveryChargesInstruction(
-          title: "noDeliveryCharges".tr,
-          icon: gifAssets.truckDelivery)
+          title: "noDeliveryCharges".tr, icon: gifAssets.truckDelivery)
     ],
     deliveryInstruction: [
       DeliveryInstructionModel(
           title: "7 Day Return".tr, icon: svgAssets.returning),
-      DeliveryInstructionModel(title: "24/7 Support".tr, icon: svgAssets.support),
-      DeliveryInstructionModel(title: "Secure Payment".tr, icon: svgAssets.wallet),
+      DeliveryInstructionModel(
+          title: "24/7 Support".tr, icon: svgAssets.support),
+      DeliveryInstructionModel(
+          title: "Secure Payment".tr, icon: svgAssets.wallet),
     ],
     orderDetail: [
       OrderDetail(title: "Bag total".tr, value: 220.00),

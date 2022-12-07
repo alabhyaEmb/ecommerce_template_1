@@ -5,14 +5,12 @@ class FilterIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-        builder: (appCtrl) {
-          return SvgPicture.asset(
-            svgAssets.filter,
-            height: AppScreenUtil().size(25),
-  fit: BoxFit.fill,
-          );
-        }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return SvgPicture.asset(
+        svgAssets.filter,
+        height: AppScreenUtil().size(25),
+        fit: BoxFit.fill,
+      );
+    });
   }
 }

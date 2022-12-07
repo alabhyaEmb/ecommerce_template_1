@@ -8,10 +8,10 @@ class DeliveryDetailController extends GetxController {
   String value = "address";
   int selectRadio = 0;
   DeliveryDetailModel? deliveryDetail;
-  String totalAmount ="0";
+  String totalAmount = "0";
 
   //select address
-  selectAddress(val,index){
+  selectAddress(val, index) {
     value = val.name!;
     selectRadio = index;
     update();

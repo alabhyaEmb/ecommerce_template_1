@@ -10,7 +10,10 @@ class PaymentWidget {
     return Container(
         height: AppScreenUtil().screenHeight(60),
         alignment: Alignment.centerLeft,
-        decoration: BoxDecoration(color: appCtrl.appTheme.greyLight25,borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(5))),
+        decoration: BoxDecoration(
+            color: appCtrl.appTheme.greyLight25,
+            borderRadius:
+                BorderRadius.circular(AppScreenUtil().borderRadius(5))),
         margin: const EdgeInsets.only(bottom: Insets.i15),
         padding: const EdgeInsets.symmetric(
             horizontal: Insets.i20, vertical: Insets.i10),

@@ -1,6 +1,5 @@
 import 'package:multikart/config.dart';
 
-
 class OrderDetail extends StatefulWidget {
   const OrderDetail({Key? key}) : super(key: key);
 
@@ -16,13 +15,12 @@ class _OrderDetailState extends State<OrderDetail> {
     return GetBuilder<OrderDetailController>(builder: (_) {
       return Directionality(
         textDirection: orderDetailCtrl.appCtrl.isRTL ||
-            orderDetailCtrl.appCtrl.languageVal == "ar"
+                orderDetailCtrl.appCtrl.languageVal == "ar"
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: const Scaffold(
           body: NestedSilverCustomAppBar(
-            bodyLayout: SingleChildScrollView(
-                child: OrderDetailBody()),
+            bodyLayout: SingleChildScrollView(child: OrderDetailBody()),
           ),
         ),
       );

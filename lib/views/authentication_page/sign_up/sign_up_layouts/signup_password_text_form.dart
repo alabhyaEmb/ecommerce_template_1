@@ -7,7 +7,7 @@ class SignUpPasswordTextForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<SignUpController>(builder: (signUpController) {
       return PasswordTextForm(
-        label:  CommonTextFont().password,
+        label: CommonTextFont().password,
         controller: signUpController.txtPassword,
         validator: (value) => CommonValidation().checkPasswordValidation(value),
         passwordVisible: signUpController.passwordVisible,
@@ -16,13 +16,13 @@ class SignUpPasswordTextForm extends StatelessWidget {
           onTap: signUpController.toggle,
           child: signUpController.passwordVisible
               ? Icon(
-            FontAwesomeIcons.eyeSlash,
-            color: signUpController.appCtrl.appTheme.contentColor,
-            size: AppScreenUtil().size(16),
-          )
+                  FontAwesomeIcons.eyeSlash,
+                  color: signUpController.appCtrl.appTheme.contentColor,
+                  size: AppScreenUtil().size(16),
+                )
               : Icon(FontAwesomeIcons.eye,
-              color: signUpController.appCtrl.appTheme.contentColor,
-              size: AppScreenUtil().size(16)),
+                  color: signUpController.appCtrl.appTheme.contentColor,
+                  size: AppScreenUtil().size(16)),
         ),
       );
     });

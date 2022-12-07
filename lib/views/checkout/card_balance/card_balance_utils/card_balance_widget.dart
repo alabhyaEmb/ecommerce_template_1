@@ -39,16 +39,14 @@ class CardBalanceWidget {
         color: appCtrl.appTheme.greyLight25,
         width: AppScreenUtil().screenWidth(80),
         height: AppScreenUtil().screenHeight(25),
-        margin: isMargin ? 15:0,
+        margin: isMargin ? 15 : 0,
         radius: 5);
   }
 
   //delink or link text
-  Widget deLinkOrLinkText(isLink){
+  Widget deLinkOrLinkText(isLink) {
     return LatoFontStyle(
-        text: isLink == true
-            ? CommonTextFont().delink
-            : CommonTextFont().link,
+        text: isLink == true ? CommonTextFont().delink : CommonTextFont().link,
         color: appCtrl.appTheme.primary,
         fontWeight: FontWeight.w700,
         fontSize: FontSizes.f12);

@@ -14,7 +14,7 @@ class OrderHistoryLayout extends StatelessWidget {
                     index: e.key,
                     lastIndex: orderHistoryCtrl.orderHistoryList.length - 1,
                     orderHistoryModel: e.value,
-                    onTap: ()=>orderHistoryCtrl.bottomSheetLayout(),
+                    onTap: () => orderHistoryCtrl.bottomSheetLayout(),
                   ).gestures(onTap: () => Get.toNamed(routeName.orderDetail));
                 }).toList(),
               ],

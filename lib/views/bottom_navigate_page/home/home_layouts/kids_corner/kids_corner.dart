@@ -28,15 +28,16 @@ class KidsCorner extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                   color: homeCtrl.appCtrl.appTheme.contentColor,
                 ),
-              
                 const Space(0, 5),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: homeCtrl.homeKidsCornerList.asMap().entries.map((e){
+                    children:
+                        homeCtrl.homeKidsCornerList.asMap().entries.map((e) {
                       return FindStyleListCard(
                         data: homeCtrl.homeKidsCornerList[e.key],
-                        isFit: true,isDiscountShow: false,
+                        isFit: true,
+                        isDiscountShow: false,
                       ).paddingOnly(right: AppScreenUtil().screenWidth(10));
                     }).toList(),
                   ),

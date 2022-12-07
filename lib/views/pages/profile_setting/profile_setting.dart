@@ -51,10 +51,10 @@ class ProfileSetting extends StatelessWidget {
 
               //cancel and save detail layout
               BottomLayout(
-                firstButtonText: ProfileFont().cancel,
-                secondButtonText: ProfileFont().saveDetails,firstTap: ()=>Get.back(),
-                  secondTap: ()=>Get.back()
-              )
+                  firstButtonText: ProfileFont().cancel,
+                  secondButtonText: ProfileFont().saveDetails,
+                  firstTap: () => Get.back(),
+                  secondTap: () => Get.back())
             ],
           ),
         ),

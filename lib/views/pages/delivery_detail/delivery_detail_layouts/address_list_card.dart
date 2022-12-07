@@ -41,7 +41,8 @@ class AddressListCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(
                           AppScreenUtil().borderRadius(2))),
                   child: LatoFontStyle(
-                      text: addressList!.addressType.toString().tr.toUpperCase(),
+                      text:
+                          addressList!.addressType.toString().tr.toUpperCase(),
                       fontSize: FontSizes.f10,
                       fontWeight: FontWeight.w600,
                       color: appCtrl.appTheme.white))

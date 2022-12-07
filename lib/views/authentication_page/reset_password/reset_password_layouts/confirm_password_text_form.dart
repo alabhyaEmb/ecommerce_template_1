@@ -10,7 +10,8 @@ class ConfirmPasswordTextForm extends StatelessWidget {
       return PasswordTextForm(
         label: ResetPasswordFont().confirmPassword,
         controller: resetPasswordController.txtConfirmPassword,
-        validator: (value) => CommonValidation().checkConfirmPasswordValidation(value,resetPasswordController.txtNewPassword.text),
+        validator: (value) => CommonValidation().checkConfirmPasswordValidation(
+            value, resetPasswordController.txtNewPassword.text),
         passwordVisible: resetPasswordController.confirmPasswordVisible,
         passwordFocus: resetPasswordController.confirmFocus,
         suffixIcon: InkWell(

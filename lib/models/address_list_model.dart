@@ -10,13 +10,13 @@ class AddressList {
 
   AddressList(
       {this.name,
-        this.address,
-        this.addressType,
-        this.locality,
-        this.state,
-        this.city,
-        this.pinCode,
-        this.phone});
+      this.address,
+      this.addressType,
+      this.locality,
+      this.state,
+      this.city,
+      this.pinCode,
+      this.phone});
 
   AddressList.fromJson(Map<String, dynamic> json) {
     name = json['name'];

@@ -9,7 +9,7 @@ class LoginPasswordTextForm extends StatelessWidget {
       return PasswordTextForm(
         controller: loginCtrl.txtPassword,
         validator: (value) => CommonValidation().checkPasswordValidation(value),
-        label:  CommonTextFont().password,
+        label: CommonTextFont().password,
         passwordVisible: loginCtrl.passwordVisible,
         passwordFocus: loginCtrl.passwordFocus,
         suffixIcon: InkWell(

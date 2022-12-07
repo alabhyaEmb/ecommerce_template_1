@@ -22,6 +22,7 @@ class ResetPasswordController extends GetxController {
     passwordVisible = !passwordVisible;
     update();
   }
+
   // Toggle Between Confirm Password show
   confirmToggle() {
     confirmPasswordVisible = !confirmPasswordVisible;
@@ -36,5 +37,4 @@ class ResetPasswordController extends GetxController {
       log('No Valid');
     }
   }
-
 }

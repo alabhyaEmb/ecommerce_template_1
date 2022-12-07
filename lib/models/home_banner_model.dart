@@ -5,7 +5,12 @@ class HomeBannerModel {
   String? offers;
   String? buttonTitle;
 
-  HomeBannerModel({required this.title, this.image,this.subTitle,this.buttonTitle,this.offers});
+  HomeBannerModel(
+      {required this.title,
+      this.image,
+      this.subTitle,
+      this.buttonTitle,
+      this.offers});
 
   factory HomeBannerModel.fromJson(Map<dynamic, dynamic> json) {
     return HomeBannerModel(

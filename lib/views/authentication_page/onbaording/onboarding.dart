@@ -18,9 +18,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen>
         onWillPop: () async {
           return onBoardingCtrl.isBack ? true : false;
         },
-        child:  Directionality(
+        child: Directionality(
           textDirection: onBoardingCtrl.appCtrl.isRTL ||
-              onBoardingCtrl.appCtrl.languageVal == "ar"
+                  onBoardingCtrl.appCtrl.languageVal == "ar"
               ? TextDirection.rtl
               : TextDirection.ltr,
           child: Scaffold(

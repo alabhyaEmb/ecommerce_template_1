@@ -21,13 +21,12 @@ class PaymentMethod extends StatelessWidget {
             return GestureDetector(
               onTap: () => paymentCtrl.selectAddressType(e.value, e.key),
               child: PaymentExpandable(
-
                 onTap: () => paymentCtrl.selectAddressType(e.value, e.key),
                 index: e.key,
                 data: e.value,
                 selectRadio: paymentCtrl.selectRadio,
-
-                isExpanded: e.key == paymentCtrl.tapped ? paymentCtrl.expand : false,
+                isExpanded:
+                    e.key == paymentCtrl.tapped ? paymentCtrl.expand : false,
                 child: PaymentExpandableList(
                   data: e.value,
                   index: e.key,

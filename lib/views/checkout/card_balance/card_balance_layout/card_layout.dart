@@ -41,8 +41,11 @@ class CardLayout extends StatelessWidget {
           const Space(0, 20),
           Row(
             children: [
-              CardBalanceWidget().buttonLayout(CommonTextFont().remove.toUpperCase()),
-              CardBalanceWidget().buttonLayout(CommonTextFont().edit.toUpperCase(),isMargin: true),
+              CardBalanceWidget()
+                  .buttonLayout(CommonTextFont().remove.toUpperCase()),
+              CardBalanceWidget().buttonLayout(
+                  CommonTextFont().edit.toUpperCase(),
+                  isMargin: true),
             ],
           )
         ],

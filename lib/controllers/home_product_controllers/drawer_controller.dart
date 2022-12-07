@@ -13,9 +13,9 @@ class DrawerPageController extends GetxController {
 
 //language bottom sheet
   bottomSheet(isLanguage) {
-
     Get.bottomSheet(
-      BottomSheetLayout(child: isLanguage?  LanguageBottomSheet(): CurrencyBottomSheet()),
+      BottomSheetLayout(
+          child: isLanguage ? LanguageBottomSheet() : CurrencyBottomSheet()),
       backgroundColor: appCtrl.appTheme.whiteColor,
       elevation: 0,
       shape: RoundedRectangleBorder(

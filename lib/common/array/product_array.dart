@@ -7,9 +7,7 @@ final appCtrl = Get.isRegistered<AppController>()
 var productList = Product(
     name: "Floral Print Skirt With White Top",
     title: "Floral Skirts",
-    description:
-        "productDescription"
-            ,
+    description: "productDescription",
     rating: 4.5,
     ratingPoints: 20,
     price: 35,
@@ -17,9 +15,7 @@ var productList = Product(
     discount: "20%",
     quantity: 1,
     totalReview: 24,
-    policy:
-        "policy"
-            ,
+    policy: "policy",
     size: [
       SizeModel(title: "S", isAvailable: true),
       SizeModel(title: "M", isAvailable: true),
@@ -48,11 +44,7 @@ var productList = Product(
       Images(image: imageAssets.product12, colorId: 5),
     ],
     detail: [
-      Detail(
-          title: "Product Details",
-          description:
-              "productDescription"
-                  ),
+      Detail(title: "Product Details", description: "productDescription"),
       Detail(
           title: "Model Size & Fit",
           description: "The model (height 5'8) is wearing a size 28"),
@@ -64,9 +56,7 @@ var productList = Product(
     reviews: [
       Reviews(
           name: "Mark Jacob",
-          description:
-              "reviewDesc"
-                  ,
+          description: "reviewDesc",
           size: "L",
           rating: 4,
           disLike: 20,
@@ -76,8 +66,7 @@ var productList = Product(
       Reviews(
           name: "Mark Jacob",
           description:
-              "Wow.. but it should have more flairs. mind-blowing purchase..🤗"
-                  ,
+              "Wow.. but it should have more flairs. mind-blowing purchase..🤗",
           size: "XL",
           rating: 4,
           disLike: 20,
@@ -88,20 +77,18 @@ var productList = Product(
     offer: Offer(
       title: "Use code MULTIKART10 to get flat 10%",
       code: "MULTIKART10",
-      desc:
-          "productOffer"
-              ,
+      desc: "productOffer",
     ),
     deliverOfferModel: DeliverOfferModel(
         title: "Check Delivery",
         description: "Enter Pincode to check delivery date / pickup option",
         deliveryOffer: [
           DeliveryOffer(
-              title: 'Free Delivery on order above ${appCtrl.priceSymbol}200.00',
+              title:
+                  'Free Delivery on order above ${appCtrl.priceSymbol}200.00',
               icon: svgAssets.truck),
           DeliveryOffer(
-              title: "Cash On delivery Available",
-              icon: svgAssets.payment),
+              title: "Cash On delivery Available", icon: svgAssets.payment),
           DeliveryOffer(
               title: "Easy 21 days returns and exchanges",
               icon: svgAssets.refund)

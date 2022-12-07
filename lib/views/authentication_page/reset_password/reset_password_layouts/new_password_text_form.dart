@@ -5,28 +5,32 @@ class NewPasswordTextForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ResetPasswordController>(builder: (resetPasswordController) {
+    return GetBuilder<ResetPasswordController>(
+        builder: (resetPasswordController) {
       return PasswordTextForm(
         label: ResetPasswordFont().newPassword,
         controller: resetPasswordController.txtNewPassword,
-        validator: (value) => CommonValidation().checkNewPasswordValidation(value),
+        validator: (value) =>
+            CommonValidation().checkNewPasswordValidation(value),
         passwordVisible: resetPasswordController.passwordVisible,
         passwordFocus: resetPasswordController.passwordFocus,
         onFieldSubmitted: (value) {
           ResetPasswordWidget().fieldFocusChange(
-              context, resetPasswordController.passwordFocus, resetPasswordController.confirmFocus);
+              context,
+              resetPasswordController.passwordFocus,
+              resetPasswordController.confirmFocus);
         },
         suffixIcon: InkWell(
           onTap: resetPasswordController.toggle,
           child: resetPasswordController.passwordVisible
               ? Icon(
-            FontAwesomeIcons.eyeSlash,
-            color: resetPasswordController.appCtrl.appTheme.contentColor,
-            size: AppScreenUtil().size(16),
-          )
+                  FontAwesomeIcons.eyeSlash,
+                  color: resetPasswordController.appCtrl.appTheme.contentColor,
+                  size: AppScreenUtil().size(16),
+                )
               : Icon(FontAwesomeIcons.eye,
-              color: resetPasswordController.appCtrl.appTheme.contentColor,
-              size: AppScreenUtil().size(16)),
+                  color: resetPasswordController.appCtrl.appTheme.contentColor,
+                  size: AppScreenUtil().size(16)),
         ),
       );
     });

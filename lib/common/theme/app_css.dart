@@ -10,10 +10,10 @@ class AppCss {
     height: 1,
   );
 
-
   //Text Style
   static TextStyle get h1 => poppins.bold.size(FontSizes.f18).letterSpace(.7);
-  static TextStyle get h2 => poppins.semiBold.size(FontSizes.f16).letterSpace(.7);
+  static TextStyle get h2 =>
+      poppins.semiBold.size(FontSizes.f16).letterSpace(.7);
   static TextStyle get h3 => poppins.semiBold.size(FontSizes.f14);
 
   static TextStyle get body1 => poppins.size(FontSizes.f14);

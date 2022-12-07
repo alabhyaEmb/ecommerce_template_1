@@ -13,11 +13,12 @@ class AnimatedCheck extends StatefulWidget {
   final double? strokeWidth;
 
   const AnimatedCheck(
-
-      { Key? key,required this.progress,
+      {Key? key,
+      required this.progress,
       required this.size,
       this.color,
-      this.strokeWidth}): super(key: key);
+      this.strokeWidth})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() => AnimatedCheckState();
@@ -32,7 +33,6 @@ class AnimatedCheckState extends State<AnimatedCheck>
 
   @override
   Widget build(BuildContext context) {
-
     return CustomPaint(
         foregroundPainter: AnimatedPathPainter(
             widget.progress, widget.color!, widget.strokeWidth),

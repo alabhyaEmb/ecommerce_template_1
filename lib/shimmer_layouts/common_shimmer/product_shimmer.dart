@@ -2,7 +2,8 @@ import '../../config.dart';
 
 class ProductShimmer extends StatelessWidget {
   final double width;
-  const ProductShimmer({Key? key,this.width = double.infinity}) : super(key: key);
+  const ProductShimmer({Key? key, this.width = double.infinity})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,11 @@ class ProductShimmer extends StatelessWidget {
             borderRadius: 2,
             color: appCtrl.appTheme.lightGray.withOpacity(.5),
             borderColor: appCtrl.appTheme.lightGray.withOpacity(.5),
-            child: const Icon(Icons.circle).alignment(Alignment.topRight).marginOnly(
-                top: AppScreenUtil().screenHeight(10),
-                right: AppScreenUtil().screenWidth(15)),
+            child: const Icon(Icons.circle)
+                .alignment(Alignment.topRight)
+                .marginOnly(
+                    top: AppScreenUtil().screenHeight(10),
+                    right: AppScreenUtil().screenWidth(15)),
           ),
           const Space(0, 10),
           Row(

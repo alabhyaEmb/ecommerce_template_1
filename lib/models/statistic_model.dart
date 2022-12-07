@@ -4,7 +4,7 @@ class Statistic {
   String? image;
   double? count;
 
-  Statistic({this.title, this.desc, this.image,this.count});
+  Statistic({this.title, this.desc, this.image, this.count});
 
   Statistic.fromJson(Map<String, dynamic> json) {
     title = json['title'];

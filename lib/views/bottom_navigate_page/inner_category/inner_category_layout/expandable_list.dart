@@ -17,14 +17,17 @@ class SelectCardList extends StatelessWidget {
             itemBuilder: (BuildContext context, int indexs) {
               return LatoFontStyle(
                 text: data[indexs]["name"],
-                textAlign: appCtrl.isRTL ||
-                    appCtrl.languageVal == "ar"  ?TextAlign.right :TextAlign.left,
+                textAlign: appCtrl.isRTL || appCtrl.languageVal == "ar"
+                    ? TextAlign.right
+                    : TextAlign.left,
                 fontSize: 14,
               )
                   .paddingSymmetric(
                       horizontal: AppScreenUtil().screenWidth(35),
                       vertical: AppScreenUtil().screenHeight(5))
-                  .gestures(onTap: () => innerCtrl.goToShopPage(data[indexs]["name"].toString()));
+                  .gestures(
+                      onTap: () => innerCtrl
+                          .goToShopPage(data[indexs]["name"].toString()));
             });
       });
     });

@@ -5,23 +5,21 @@ class PinCodeTextBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AddAddressController>(
-      builder: (addAddressCtrl) {
-        return CustomTextFormField(
-          radius: 5,
-          labelText: AddAddressFont().pinCodeText,
-          controller: addAddressCtrl.txtPinCode,
-          focusNode: addAddressCtrl.pinCodeFocus,
-          keyboardType: TextInputType.number,
-          maxLength: 10,
-          onFieldSubmitted: (value) {
-            AddAddressWidget().fieldFocusChange(
-                context,
-                addAddressCtrl.pinCodeFocus,
-                addAddressCtrl.flatHouseBuildingFocus);
-          },
-        );
-      }
-    );
+    return GetBuilder<AddAddressController>(builder: (addAddressCtrl) {
+      return CustomTextFormField(
+        radius: 5,
+        labelText: AddAddressFont().pinCodeText,
+        controller: addAddressCtrl.txtPinCode,
+        focusNode: addAddressCtrl.pinCodeFocus,
+        keyboardType: TextInputType.number,
+        maxLength: 10,
+        onFieldSubmitted: (value) {
+          AddAddressWidget().fieldFocusChange(
+              context,
+              addAddressCtrl.pinCodeFocus,
+              addAddressCtrl.flatHouseBuildingFocus);
+        },
+      );
+    });
   }
 }

@@ -26,7 +26,7 @@ class AppBarActionLayout extends StatelessWidget {
           if (appCtrl.isHeart)
             HeartIcon(
               color: appCtrl.appTheme.blackColor,
-            ).gestures(onTap: ()async{
+            ).gestures(onTap: () async {
               appCtrl.isShimmer = true;
               appCtrl.selectedIndex = 3;
               appCtrl.isHeart = false;
@@ -39,7 +39,6 @@ class AppBarActionLayout extends StatelessWidget {
               await Future.delayed(Durations.s1);
               appCtrl.isShimmer = false;
               Get.forceAppUpdate();
-
             }).paddingSymmetric(
                 horizontal: AppScreenUtil()
                     .screenWidth(appCtrl.isHeart && appCtrl.isCart ? 0 : 10)),

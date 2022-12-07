@@ -1,13 +1,12 @@
-
 import '../../../../config.dart';
 
-class OrderSuccessWidget{
+class OrderSuccessWidget {
   final appCtrl = Get.isRegistered<AppController>()
       ? Get.find<AppController>()
       : Get.put(AppController());
 
   //common detail text
-  Widget commonDetailText(title,val){
+  Widget commonDetailText(title, val) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -28,9 +27,8 @@ class OrderSuccessWidget{
   }
 
   //order summary image
-  Widget orderSummaryImage(image)=>   ClipRRect(
-      borderRadius:
-      BorderRadius.circular(AppScreenUtil().borderRadius(5)),
+  Widget orderSummaryImage(image) => ClipRRect(
+      borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(5)),
       child: FadeInImageLayout(
           image: image,
           height: AppScreenUtil().screenHeight(70),

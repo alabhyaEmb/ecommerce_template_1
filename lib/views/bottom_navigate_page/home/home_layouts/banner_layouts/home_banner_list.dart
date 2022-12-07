@@ -7,8 +7,9 @@ class HomeBannerList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (homeCtrl) {
       return Container(
-        margin:
-            EdgeInsets.only(top: AppScreenUtil().screenHeight(16),bottom: AppScreenUtil().screenHeight(12)),
+        margin: EdgeInsets.only(
+            top: AppScreenUtil().screenHeight(16),
+            bottom: AppScreenUtil().screenHeight(12)),
         height: 200.w,
         child: Column(
           children: [

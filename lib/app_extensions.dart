@@ -1,5 +1,3 @@
-
-
 export 'extensions/spacing.dart';
 export 'extensions/text_extension.dart';
 export 'extensions/text_span_extension.dart';

@@ -8,11 +8,13 @@ snackBar(message, {context, duration}) {
       style: AppCss.h2.copyWith(color: Colors.white),
     ),
     duration: Duration(
-      milliseconds: duration == 'short' ? 1000 : (duration == 'long' ? 20000 : 2000),
+      milliseconds:
+          duration == 'short' ? 1000 : (duration == 'long' ? 20000 : 2000),
     ),
     action: SnackBarAction(
       label: "ok",
-      onPressed: () => ScaffoldMessenger.of(context ?? Get.context).clearSnackBars(),
+      onPressed: () =>
+          ScaffoldMessenger.of(context ?? Get.context).clearSnackBars(),
     ),
   );
 
@@ -72,7 +74,8 @@ appUpdateDialog(
     titleStyle: AppCss.h2,
     barrierDismissible: !forceUpdate,
     middleTextStyle: AppCss.body2,
-    contentPadding: const EdgeInsets.only(top: 20, bottom: 0, left: 20, right: 20),
+    contentPadding:
+        const EdgeInsets.only(top: 20, bottom: 0, left: 20, right: 20),
     titlePadding: const EdgeInsets.only(top: 15),
     onWillPop: forceUpdate == true ? () async => false : null,
     actions: [
@@ -119,7 +122,8 @@ appUpdateDialog(
   );
 }
 
-deleteConfirmation({context, title, message, onConfirm, bool barrierDismissible = true}) {
+deleteConfirmation(
+    {context, title, message, onConfirm, bool barrierDismissible = true}) {
   // set up the buttons
   Widget cancelButton = TextButton(
     child: Text(trans('cancel'), style: AppCss.body3),
@@ -158,8 +162,8 @@ sendOtp() async {
         alignment: Alignment.center,
         child: Container(
           height: AppScreenUtil().screenHeight(250),
-          margin: EdgeInsets.symmetric(
-              horizontal: AppScreenUtil().screenWidth(12)),
+          margin:
+              EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(12)),
           child: OtpScreen(),
         ),
       );

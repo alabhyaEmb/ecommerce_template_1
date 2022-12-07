@@ -30,7 +30,6 @@ class DashboardController extends GetxController {
 
   //bottom change
   bottomNavigationChange(val, context) async {
-
     appCtrl.selectedIndex = val;
     appCtrl.isLoading = true;
     appCtrl.isShimmer = true;
@@ -72,9 +71,8 @@ class DashboardController extends GetxController {
     }
     appCtrl.isLoading = false;
 
-
     update();
-    if(appCtrl.selectedIndex != 4) {
+    if (appCtrl.selectedIndex != 4) {
       await Future.delayed(Durations.s1);
     }
     appCtrl.isShimmer = false;
@@ -90,6 +88,4 @@ class DashboardController extends GetxController {
     appCtrl.selectedIndex = 0;
     update();
   }
-
-
 }

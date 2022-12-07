@@ -55,7 +55,12 @@ class CountryTextBox extends StatelessWidget {
                       },
                       items: addAddressCtrl.country.map((String value) {
                         return DropdownMenuItem<String>(
-                            value: value, child: Text(value,style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily),));
+                            value: value,
+                            child: Text(
+                              value,
+                              style: TextStyle(
+                                  fontFamily: GoogleFonts.lato().fontFamily),
+                            ));
                       }).toList())));
         }),
       );

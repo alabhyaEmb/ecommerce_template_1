@@ -7,5 +7,4 @@ class AddAddressWidget {
     currentFocus.unfocus();
     FocusScope.of(context).requestFocus(nextFocus);
   }
-
 }

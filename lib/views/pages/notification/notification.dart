@@ -1,5 +1,3 @@
-
-
 import '../../../config.dart';
 
 class Notification extends StatelessWidget {
@@ -10,9 +8,9 @@ class Notification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<NotificationController>(builder: (_) {
-      return  Directionality(
+      return Directionality(
         textDirection: notificationCtrl.appCtrl.isRTL ||
-            notificationCtrl.appCtrl.languageVal == "ar"
+                notificationCtrl.appCtrl.languageVal == "ar"
             ? TextDirection.rtl
             : TextDirection.ltr,
         child: Scaffold(
@@ -24,23 +22,25 @@ class Notification extends StatelessWidget {
             backgroundColor: notificationCtrl.appCtrl.appTheme.whiteColor,
             title: Text(NotificationFont().notification),
           ),
-          body: notificationCtrl.appCtrl.isShimmer ? const NotificationShimmer() : SingleChildScrollView(
-            child: Column(
-              children: [
-                //notification type layout
-                const NotificationCategory(),
-                const Space(0, 20),
+          body: notificationCtrl.appCtrl.isShimmer
+              ? const NotificationShimmer()
+              : SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      //notification type layout
+                      const NotificationCategory(),
+                      const Space(0, 20),
 
-                //notification list layout
-                ...notificationCtrl.filterList.asMap().entries.map((e) {
-                  return NotificationList(
-                    notificationModel: e.value,
-                    index: e.key,
-                  );
-                })
-              ],
-            ),
-          ),
+                      //notification list layout
+                      ...notificationCtrl.filterList.asMap().entries.map((e) {
+                        return NotificationList(
+                          notificationModel: e.value,
+                          index: e.key,
+                        );
+                      })
+                    ],
+                  ),
+                ),
         ),
       );
     });

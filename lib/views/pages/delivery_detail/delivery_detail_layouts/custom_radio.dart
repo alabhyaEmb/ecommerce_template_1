@@ -24,9 +24,11 @@ class CustomRadio extends StatelessWidget {
               shape: BoxShape.circle,
               border: Border.all(
                   color: isBorderColor
-                      ? selectRadio == index ? appCtrl.appTheme.primary :appCtrl.appTheme.borderColor
+                      ? selectRadio == index
+                          ? appCtrl.appTheme.primary
+                          : appCtrl.appTheme.borderColor
                       : appCtrl.appTheme.borderColor,
-                  width: isBorderColor ? 1.5: 2),
+                  width: isBorderColor ? 1.5 : 2),
               color: selectRadio == index
                   ? appCtrl.appTheme.whiteColor
                   : appCtrl.appTheme.whiteColor),

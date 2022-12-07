@@ -1,4 +1,3 @@
-
 import '../../config.dart';
 
 class OrderDetailController extends GetxController {
@@ -7,9 +6,7 @@ class OrderDetailController extends GetxController {
       : Get.put(AppController());
 
   TextEditingController controller = TextEditingController();
-  List<OrderHistoryModel> orderHistoryList =[];
-
-
+  List<OrderHistoryModel> orderHistoryList = [];
 
   @override
   void onReady() {

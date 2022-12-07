@@ -5,10 +5,11 @@ class CurrentPasswordTextForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<ResetPasswordController>(builder: (resetPasswordController) {
+    return GetBuilder<ResetPasswordController>(
+        builder: (resetPasswordController) {
       return Padding(
         padding:
-        EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),
+            EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),
         child: CustomTextFormField(
           radius: 5,
           labelText: ResetPasswordFont().currentPassword,
@@ -17,9 +18,12 @@ class CurrentPasswordTextForm extends StatelessWidget {
           keyboardType: TextInputType.text,
           onFieldSubmitted: (value) {
             SignUpWidget().fieldFocusChange(
-                context, resetPasswordController.currentFocus, resetPasswordController.passwordFocus);
+                context,
+                resetPasswordController.currentFocus,
+                resetPasswordController.passwordFocus);
           },
-          validator: (value) => CommonValidation().checkCurrentPasswordValidation(value),
+          validator: (value) =>
+              CommonValidation().checkCurrentPasswordValidation(value),
         ),
       );
     });

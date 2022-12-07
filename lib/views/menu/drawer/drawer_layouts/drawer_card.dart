@@ -33,7 +33,9 @@ class DrawerCard extends StatelessWidget {
               indent: 15,
             )
         ],
-      ).marginSymmetric(horizontal: AppScreenUtil().screenWidth(8)).gestures(onTap: onTap);
+      )
+          .marginSymmetric(horizontal: AppScreenUtil().screenWidth(8))
+          .gestures(onTap: onTap);
     });
   }
 }

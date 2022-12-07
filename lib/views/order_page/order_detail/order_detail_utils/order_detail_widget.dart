@@ -23,7 +23,7 @@ class OrderDetailWidget {
       ).marginSymmetric(horizontal: Insets.i15);
 
   // button layout
-  Widget buttonLayout(text,{GestureTapCallback? onTap}) => CustomButton(
+  Widget buttonLayout(text, {GestureTapCallback? onTap}) => CustomButton(
       title: text,
       onTap: onTap,
       border: Border.all(color: appCtrl.appTheme.contentColor),

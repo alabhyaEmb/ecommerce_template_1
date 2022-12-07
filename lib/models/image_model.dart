@@ -2,7 +2,7 @@ class Images {
   String? image;
   int? colorId;
 
-  Images({this.image,this.colorId});
+  Images({this.image, this.colorId});
 
   Images.fromJson(Map<String, dynamic> json) {
     image = json['image'];

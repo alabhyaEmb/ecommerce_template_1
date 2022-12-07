@@ -47,7 +47,7 @@ class Variants extends StatelessWidget {
             firstActionName: CommonTextFont().moveToWishList,
             secondAction: CommonTextFont().remove,
             secondActionTap: secondActionTap,
-            firstActionTap:  firstActionTap,
+            firstActionTap: firstActionTap,
           )
         ],
       );

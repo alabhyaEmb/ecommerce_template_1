@@ -1,5 +1,5 @@
-
 import 'package:get/get.dart';
+
 //text constants
 class ShopFont {
   String collection = "collection".tr;

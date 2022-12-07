@@ -1,5 +1,3 @@
-
-
 import '../../../config.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -36,7 +34,6 @@ class _DrawerScreenState extends State<DrawerScreen>
     return GetBuilder<AppController>(builder: (appCtrl) {
       return GetBuilder<DashboardController>(builder: (dashboardCtrl) {
         return Drawer(
-
           backgroundColor: appCtrl.appTheme.bgColor,
           child: ListView(
             children: [
@@ -44,11 +41,13 @@ class _DrawerScreenState extends State<DrawerScreen>
               const Space(0, 15),
               ...dashboardCtrl.drawerList.asMap().entries.map((e) {
                 return DrawerDataListLayout(
-                    data: e.value,
-                    animationController: _animationController,
-                    duration: animationDuration,
-                    index: e.key,
-                    lastIndex: dashboardCtrl.drawerList.length - 1,onTap: ()=> dashboardCtrl.drawerCtrl.goToPage(e.key),);
+                  data: e.value,
+                  animationController: _animationController,
+                  duration: animationDuration,
+                  index: e.key,
+                  lastIndex: dashboardCtrl.drawerList.length - 1,
+                  onTap: () => dashboardCtrl.drawerCtrl.goToPage(e.key),
+                );
               }).toList(),
               //logout button layout
               const LogoutButton()

@@ -1,8 +1,8 @@
 import '../../../../config.dart';
 
 class EmptyLayout extends StatelessWidget {
-final String? title,desc;
-  const EmptyLayout({Key? key,this.title,this.desc}) : super(key: key);
+  final String? title, desc;
+  const EmptyLayout({Key? key, this.title, this.desc}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,7 @@ final String? title,desc;
           ),
           const Space(0, 15),
           LatoFontStyle(
-            text:
-                desc,
+            text: desc,
             fontSize: FontSizes.f16,
             textAlign: TextAlign.center,
             fontWeight: FontWeight.normal,
@@ -30,7 +29,11 @@ final String? title,desc;
             color: appCtrl.appTheme.contentColor,
           ),
           const Space(0, 30),
-          CustomButton(title: CommonTextFont().startShopping.toUpperCase(),fontSize: FontSizes.f16,fontWeight: FontWeight.w600,)
+          CustomButton(
+            title: CommonTextFont().startShopping.toUpperCase(),
+            fontSize: FontSizes.f16,
+            fontWeight: FontWeight.w600,
+          )
         ],
       ).marginSymmetric(horizontal: AppScreenUtil().screenWidth(15));
     });

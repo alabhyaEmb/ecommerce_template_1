@@ -41,15 +41,15 @@ class AppController extends GetxController {
   void onReady() async {
     bottomList = AppArray().bottomSheet;
     rateValue = double.parse(AppArray().currencyList[0]['INR'].toString());
-  getData();
+    getData();
     super.onReady();
   }
 
   //go to product detail screen
-  goToProductDetail(){
-    isNotification =false;
-    isSearch =false;
-    isCart  =true;
+  goToProductDetail() {
+    isNotification = false;
+    isSearch = false;
+    isCart = true;
     isShare = true;
     isHeart = true;
     update();
@@ -57,14 +57,14 @@ class AppController extends GetxController {
   }
 
   //go to shop page
-  goToShopPage(name){
+  goToShopPage(name) {
     isNotification = true;
     update();
-    Get.toNamed(routeName.shopPage,arguments: name);
+    Get.toNamed(routeName.shopPage, arguments: name);
   }
 
   //go to home screen
-  goToHome(){
+  goToHome() {
     isHeart = true;
     isCart = true;
     isShare = false;
@@ -74,7 +74,7 @@ class AppController extends GetxController {
   }
 
 //get data from storage
-  getData()async{
+  getData() async {
     String? languageCode = storage.read(Session.languageCode);
     languageVal = storage.read(Session.languageCode) ?? 'en';
     String? countryCode = storage.read(Session.countryCode);
@@ -108,5 +108,4 @@ class AppController extends GetxController {
     _appTheme = theme;
     Get.forceAppUpdate();
   }
-
 }

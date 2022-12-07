@@ -9,12 +9,12 @@ class DaysWiseList {
 
   DaysWiseList(
       {this.image,
-        this.name,
-        this.size,
-        this.qty,
-        this.date,
-        this.deliveryStatus,
-        this.status});
+      this.name,
+      this.size,
+      this.qty,
+      this.date,
+      this.deliveryStatus,
+      this.status});
 
   DaysWiseList.fromJson(Map<String, dynamic> json) {
     image = json['image'];

@@ -12,7 +12,16 @@ class LatoFontStyle extends StatelessWidget {
   final TextAlign textAlign;
 
   const LatoFontStyle(
-      {Key? key, this.text, this.color, this.onTap, this.letterSpacing,this.fontWeight = FontWeight.normal,this.fontSize = FontSizes.f16,this.textDecoration = TextDecoration.none,this.textAlign = TextAlign.left,this.overflow = TextOverflow.ellipsis})
+      {Key? key,
+      this.text,
+      this.color,
+      this.onTap,
+      this.letterSpacing,
+      this.fontWeight = FontWeight.normal,
+      this.fontSize = FontSizes.f16,
+      this.textDecoration = TextDecoration.none,
+      this.textAlign = TextAlign.left,
+      this.overflow = TextOverflow.ellipsis})
       : super(key: key);
 
   @override

@@ -25,4 +25,3 @@ class OrderHistoryModel {
     return data;
   }
 }
-

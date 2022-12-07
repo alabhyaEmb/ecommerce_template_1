@@ -9,7 +9,16 @@ class HomeFindStyleCategoryModel {
   bool isNew;
   double? rating;
 
-  HomeFindStyleCategoryModel({required this.name, this.image,this.categoryId,this.totalPrice,this.mrp,this.discount,this.isFav,this.rating,this.isNew = false});
+  HomeFindStyleCategoryModel(
+      {required this.name,
+      this.image,
+      this.categoryId,
+      this.totalPrice,
+      this.mrp,
+      this.discount,
+      this.isFav,
+      this.rating,
+      this.isNew = false});
 
   factory HomeFindStyleCategoryModel.fromJson(Map<dynamic, dynamic> json) {
     return HomeFindStyleCategoryModel(

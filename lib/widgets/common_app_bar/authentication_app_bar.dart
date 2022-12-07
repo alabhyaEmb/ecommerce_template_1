@@ -3,7 +3,8 @@ import 'package:multikart/config.dart';
 class AuthenticationAppBar extends StatelessWidget {
   final bool? isDone;
   final GestureTapCallback? onTap;
-  const AuthenticationAppBar({Key? key,this.isDone,this.onTap}) : super(key: key);
+  const AuthenticationAppBar({Key? key, this.isDone, this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +20,12 @@ class AuthenticationAppBar extends StatelessWidget {
                 top: MediaQuery.of(context).size.height * 0.12 / 2),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:  [
+              children: [
                 const LogoImage(),
-                SkipTextWidget(isDone: isDone,onTap: onTap,),
+                SkipTextWidget(
+                  isDone: isDone,
+                  onTap: onTap,
+                ),
               ],
             ),
           ),

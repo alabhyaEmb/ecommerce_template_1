@@ -32,13 +32,14 @@ class ProfileWidget {
   Widget securityTextBox(label,
       {TextEditingController? controller,
       FocusNode? focusNode,
-      ValueChanged<String>? onFieldSubmitted,final TextInputType? keyboardType}) {
+      ValueChanged<String>? onFieldSubmitted,
+      final TextInputType? keyboardType}) {
     return CustomTextFormField(
         radius: 5,
         labelText: label,
         controller: controller,
         focusNode: focusNode,
-        keyboardType:keyboardType,
+        keyboardType: keyboardType,
         suffixIconConstraints: BoxConstraints(
             minHeight: AppScreenUtil().size(18),
             minWidth: AppScreenUtil().size(18)),

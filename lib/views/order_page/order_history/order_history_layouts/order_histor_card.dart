@@ -3,9 +3,13 @@ import '../../../../config.dart';
 class OrderHistoryCard extends StatelessWidget {
   final OrderHistoryModel? orderHistoryModel;
   final int? index, lastIndex;
-final GestureTapCallback? onTap;
+  final GestureTapCallback? onTap;
   const OrderHistoryCard(
-      {Key? key, this.orderHistoryModel, this.index, this.lastIndex, this.onTap})
+      {Key? key,
+      this.orderHistoryModel,
+      this.index,
+      this.lastIndex,
+      this.onTap})
       : super(key: key);
 
   @override
@@ -29,9 +33,12 @@ final GestureTapCallback? onTap;
                 lastIndex: orderHistoryModel!.daysWiseList!.length - 1,
                 daysWiseList: data.value,
                 onTap: onTap,
-                isRatingShow: orderHistoryModel!.orderDay == "Past Orders" || orderHistoryModel!.orderDay =="과거 주문"  || orderHistoryModel!.orderDay =="الطلبات السابقة" ||
+                isRatingShow: orderHistoryModel!.orderDay == "Past Orders" ||
+                        orderHistoryModel!.orderDay == "과거 주문" ||
+                        orderHistoryModel!.orderDay == "الطلبات السابقة" ||
                         orderHistoryModel!.orderDay == "पिछले आदेश"
-                    ? true:false,
+                    ? true
+                    : false,
               );
             }).toList(),
             const Space(0, 20),

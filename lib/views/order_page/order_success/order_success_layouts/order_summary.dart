@@ -10,16 +10,23 @@ class OrderSummary extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           LatoFontStyle(
-              text: OrderSuccessFont().orderSummary,
-              fontSize: FontSizes.f16,
-              color: appCtrl.appTheme.blackColor,
-              fontWeight: FontWeight.w700).paddingSymmetric(horizontal: AppScreenUtil().screenWidth(15)),
+                  text: OrderSuccessFont().orderSummary,
+                  fontSize: FontSizes.f16,
+                  color: appCtrl.appTheme.blackColor,
+                  fontWeight: FontWeight.w700)
+              .paddingSymmetric(horizontal: AppScreenUtil().screenWidth(15)),
           const Space(0, 20),
           ...orderSummaryArray.asMap().entries.map((e) {
-            return OrderSuccessCard(orderSummaryModel: e.value,index: e.key,);
+            return OrderSuccessCard(
+              orderSummaryModel: e.value,
+              index: e.key,
+            );
           }).toList(),
-
-          CartOrderDetailLayout(cartModelList: cartList,isDeliveryShow: false,isApplyText: false,),
+          CartOrderDetailLayout(
+            cartModelList: cartList,
+            isDeliveryShow: false,
+            isApplyText: false,
+          ),
           const Space(0, 50),
         ],
       )

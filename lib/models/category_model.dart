@@ -6,7 +6,8 @@ class CategoryModel {
   String? description;
   Color? bgColor;
 
-  CategoryModel({required this.title, this.image,this.description,this.bgColor});
+  CategoryModel(
+      {required this.title, this.image, this.description, this.bgColor});
 
   factory CategoryModel.fromJson(Map<dynamic, dynamic> json) {
     return CategoryModel(

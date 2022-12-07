@@ -7,7 +7,15 @@ class CommonShimmer extends StatelessWidget {
   final double? height;
   final double? width;
   final Widget? child;
-  const CommonShimmer({Key? key,this.color,this.width,this.borderRadius = 5,this.child,this.height,this.borderColor}) : super(key: key);
+  const CommonShimmer(
+      {Key? key,
+      this.color,
+      this.width,
+      this.borderRadius = 5,
+      this.child,
+      this.height,
+      this.borderColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +23,8 @@ class CommonShimmer extends StatelessWidget {
       decoration: BoxDecoration(
           color: color,
           border: Border.all(color: borderColor!),
-          borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(borderRadius))
-      ),
+          borderRadius: BorderRadius.circular(
+              AppScreenUtil().borderRadius(borderRadius))),
       height: AppScreenUtil().screenHeight(height!),
       width: AppScreenUtil().screenWidth(width!),
       child: child,

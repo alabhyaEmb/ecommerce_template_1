@@ -5,13 +5,11 @@ class ShopShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return Shimmer.fromColors(
-            baseColor: appCtrl.appTheme.greyLight25,
-            highlightColor: appCtrl.appTheme.gray,
-            child: const CommonGridViewList());
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return Shimmer.fromColors(
+          baseColor: appCtrl.appTheme.greyLight25,
+          highlightColor: appCtrl.appTheme.gray,
+          child: const CommonGridViewList());
+    });
   }
 }

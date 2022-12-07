@@ -1,5 +1,3 @@
-
-
 import '../../config.dart';
 
 class TermsAndConditionController extends GetxController {
@@ -7,9 +5,9 @@ class TermsAndConditionController extends GetxController {
       ? Get.find<AppController>()
       : Get.put(AppController());
 
- List<TermsAndConditionModel> termsAndConditionList = [];
+  List<TermsAndConditionModel> termsAndConditionList = [];
 
- @override
+  @override
   void onReady() {
     // TODO: implement onReady
     super.onReady();

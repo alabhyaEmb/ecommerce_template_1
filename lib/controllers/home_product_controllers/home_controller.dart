@@ -1,4 +1,6 @@
 import 'package:get_storage/get_storage.dart';
+import 'package:multikart/models/category_new_model.dart';
+import 'package:multikart/services/api_service.dart';
 
 import '../../config.dart';
 
@@ -7,10 +9,10 @@ class HomeController extends GetxController {
       ? Get.find<AppController>()
       : Get.put(AppController());
 
-
   final storage = GetStorage();
   double loginWidth = 40.0;
   double loginHeight = 40.0;
+  List<CategoryNewModel> categoryNewModel = [];
   List<HomeCategoryModel> homeCategoryList = [];
   List<HomeBannerModel> bannerList = [];
   List<HomeDealOfTheDayModel> dealOfTheDayList = [];
@@ -24,6 +26,7 @@ class HomeController extends GetxController {
   int selectedStyleCategory = 0;
   final CarouselController controller = CarouselController();
   bool selected = false;
+  ApiService apiService = ApiService();
 
   @override
   void onReady() async {
@@ -32,9 +35,10 @@ class HomeController extends GetxController {
   }
 
 //get data list
-  getData()async{
+  getData() async {
     appCtrl.isShimmer = true;
     appCtrl.update();
+    categoryNewModel = await apiService.getCategories();
     homeCategoryList = AppArray().homeCategory;
     bannerList = AppArray().homeBanner;
     dealOfTheDayList = AppArray().homeDealOfTheDayList;
@@ -42,7 +46,7 @@ class HomeController extends GetxController {
     findStyleCategoryList = AppArray().homeFindStyleCategoryList;
     biggestDealBrandList = AppArray().biggestDealBrandList;
     homeKidsCornerList = AppArray().homeKidsCornerList;
-      offerCornerList = AppArray().offerCornerList;
+    offerCornerList = AppArray().offerCornerList;
     loginWidth = ScreenUtil().screenWidth;
     loginHeight = 500.w;
     update();

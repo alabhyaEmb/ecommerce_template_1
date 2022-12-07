@@ -12,7 +12,7 @@ class CouponModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data =  <String, dynamic>{};
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['code'] = code;
     data['title'] = title;
     data['description'] = description;

@@ -252,7 +252,8 @@ final dynamic kr = {
   "Check Delivery": "배송 확인",
   "Easy 21 days returns and exchanges": "간편한 21일 반품 및 교환",
   "Cash On delivery Available": "대금 상환 가능",
-  'Free Delivery on order above ${appCtrl.priceSymbol}200.00': '${appCtrl.priceSymbol}200.00 이상 주문 시 무료 배송',
+  'Free Delivery on order above ${appCtrl.priceSymbol}200.00':
+      '${appCtrl.priceSymbol}200.00 이상 주문 시 무료 배송',
   "Enter Pincode to check delivery date / pickup option":
       "배송일/픽업옵션 확인을 위해 핀코드 입력",
   "MULTIKART10": "MULTIKART10",

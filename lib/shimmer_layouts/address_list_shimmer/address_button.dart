@@ -5,17 +5,14 @@ class AddressButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return CommonShimmer(
-          height: 20,
-          width: 100,
-          borderRadius: 2,
-          color: appCtrl.appTheme.lightGray.withOpacity(.3),
-          borderColor:
-          appCtrl.appTheme.lightGray.withOpacity(.3),
-        );
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return CommonShimmer(
+        height: 20,
+        width: 100,
+        borderRadius: 2,
+        color: appCtrl.appTheme.lightGray.withOpacity(.3),
+        borderColor: appCtrl.appTheme.lightGray.withOpacity(.3),
+      );
+    });
   }
 }

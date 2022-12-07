@@ -1,4 +1,3 @@
-
 import '../../config.dart';
 
 class CouponsController extends GetxController {
@@ -9,7 +8,7 @@ class CouponsController extends GetxController {
   TextEditingController controller = TextEditingController();
   CartModel? cartModelList;
   String totalAmount = "0";
-  List<CouponModel>? couponList =[];
+  List<CouponModel>? couponList = [];
 
   @override
   void onReady() {

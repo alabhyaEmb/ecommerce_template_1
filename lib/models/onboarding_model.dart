@@ -3,7 +3,7 @@ class OnBoardingModel {
   String? image;
   String? description;
 
-  OnBoardingModel({required this.title, this.image,this.description});
+  OnBoardingModel({required this.title, this.image, this.description});
 
   factory OnBoardingModel.fromJson(Map<String, dynamic> json) {
     return OnBoardingModel(

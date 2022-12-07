@@ -103,7 +103,8 @@ final dynamic ar = {
   'clothingForYourLilOne': "ملابس من أجل Li’l One",
   'offerCorner': "ركن العرض",
   'UNDER ${appCtrl.priceSymbol}50.00': "تحت ${appCtrl.priceSymbol} 50.00 دولار",
-  'Flat ${appCtrl.priceSymbol}20 OFF': "شقة ${appCtrl.priceSymbol} خصم 20 دولار",
+  'Flat ${appCtrl.priceSymbol}20 OFF':
+      "شقة ${appCtrl.priceSymbol} خصم 20 دولار",
   'buy 1 get 1': "أشتري 1 و أحصل على 1",
   'upto 50% off': "خصم بنسبة تصل إلى 50",
   "categories": "فئات",
@@ -598,7 +599,8 @@ final dynamic ar = {
   "Find Products, Banner, Sale": "البحث عن المنتجات ، لافتة ، بيع",
   "Cart, Order & Payment": "عربة التسوق والطلب والدفع",
   "Add your Products & Placed Order": "أضف منتجاتك وطلباتك المقدمة",
-  "Check Order History, tracking pages..": "تحقق من سجل الطلبات ، صفحات التتبع ..",
+  "Check Order History, tracking pages..":
+      "تحقق من سجل الطلبات ، صفحات التتبع ..",
   "deliveryBy": "التوصيل بواسطه",
   "off": "إيقاف",
   "ratings": "التقييمات",

@@ -12,7 +12,7 @@ class FindStyleListCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<AppController>(builder: (appCtrl) {
       return InkWell(
-          onTap: ()=> appCtrl.goToProductDetail(),
+        onTap: () => appCtrl.goToProductDetail(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Stack(alignment: Alignment.topLeft, children: [
             Stack(alignment: Alignment.topRight, children: [
@@ -38,9 +38,15 @@ class FindStyleListCard extends StatelessWidget {
           ).paddingOnly(left: AppScreenUtil().screenWidth(5)),
           const Space(0, 5),
           PriceLayout(
-              totalPrice:'${appCtrl.priceSymbol} ${(data!.totalPrice! * appCtrl.rateValue).toStringAsFixed(2)}',
-              mrp:'${appCtrl.priceSymbol} ${(data!.mrp! * appCtrl.rateValue)}',
-              discount: data!.discount, fontSize:isDiscountShow ? MediaQuery.of(context).size.width >400 ?FontSizes.f11 : FontSizes.f12: FontSizes.f12,
+              totalPrice:
+                  '${appCtrl.priceSymbol} ${(data!.totalPrice! * appCtrl.rateValue).toStringAsFixed(2)}',
+              mrp: '${appCtrl.priceSymbol} ${(data!.mrp! * appCtrl.rateValue)}',
+              discount: data!.discount,
+              fontSize: isDiscountShow
+                  ? MediaQuery.of(context).size.width > 400
+                      ? FontSizes.f11
+                      : FontSizes.f12
+                  : FontSizes.f12,
               isDiscountShow: isDiscountShow)
         ]),
       );

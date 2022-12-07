@@ -1,4 +1,3 @@
-
 import '../../../../config.dart';
 
 class OrderSuccessDetail extends StatelessWidget {
@@ -16,15 +15,18 @@ class OrderSuccessDetail extends StatelessWidget {
               color: appCtrl.appTheme.blackColor,
               fontWeight: FontWeight.w700),
           const Space(0, 20),
-          OrderSuccessWidget().commonDetailText(OrderSuccessFont().yourOrder, OrderSuccessFont().orderInfo),
+          OrderSuccessWidget().commonDetailText(
+              OrderSuccessFont().yourOrder, OrderSuccessFont().orderInfo),
           const Space(0, 20),
-          OrderSuccessWidget().commonDetailText(OrderSuccessFont().orderShipped, OrderSuccessFont().orderShippedAddress),
-
+          OrderSuccessWidget().commonDetailText(OrderSuccessFont().orderShipped,
+              OrderSuccessFont().orderShippedAddress),
           const Space(0, 20),
-          OrderSuccessWidget().commonDetailText(OrderSuccessFont().paymentMethod, OrderSuccessFont().googleApi),
-         
+          OrderSuccessWidget().commonDetailText(
+              OrderSuccessFont().paymentMethod, OrderSuccessFont().googleApi),
         ],
-      ).width(MediaQuery.of(context).size.width).marginSymmetric(horizontal: AppScreenUtil().screenWidth(15));
+      )
+          .width(MediaQuery.of(context).size.width)
+          .marginSymmetric(horizontal: AppScreenUtil().screenWidth(15));
     });
   }
 }

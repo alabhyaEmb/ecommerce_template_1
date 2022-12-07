@@ -1,4 +1,3 @@
-
 import '../../../../../config.dart';
 
 class InnerCategoryBrands extends StatelessWidget {
@@ -17,11 +16,9 @@ class InnerCategoryBrands extends StatelessWidget {
             color: innerCtrl.appCtrl.appTheme.blackColor,
           ),
           const Space(0, 10),
-         const CommonBrandLayout()
+          const CommonBrandLayout()
         ],
-      ).marginSymmetric(
-
-          horizontal: AppScreenUtil().screenHeight(15));
+      ).marginSymmetric(horizontal: AppScreenUtil().screenHeight(15));
     });
   }
 }

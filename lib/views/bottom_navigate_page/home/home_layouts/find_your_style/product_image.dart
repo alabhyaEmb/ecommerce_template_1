@@ -3,13 +3,13 @@ import '../../../../../config.dart';
 class ProductImage extends StatelessWidget {
   final String? image;
   final bool isFit;
-  const ProductImage({Key? key,this.image,this.isFit = true}) : super(key: key);
+  const ProductImage({Key? key, this.image, this.isFit = true})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius:
-      BorderRadius.circular(AppScreenUtil().borderRadius(8)),
+      borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(8)),
       child: Card(
         elevation: 3,
         shape: RoundedRectangleBorder(
@@ -17,8 +17,7 @@ class ProductImage extends StatelessWidget {
         ),
         shadowColor: Colors.grey.withOpacity(.5),
         child: ClipRRect(
-          borderRadius:
-          BorderRadius.circular(AppScreenUtil().borderRadius(5)),
+          borderRadius: BorderRadius.circular(AppScreenUtil().borderRadius(5)),
           child: FadeInImageLayout(
             image: image,
             fit: isFit ? BoxFit.cover : BoxFit.fill,

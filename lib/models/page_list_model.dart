@@ -28,4 +28,3 @@ class PageListModel {
     return data;
   }
 }
-

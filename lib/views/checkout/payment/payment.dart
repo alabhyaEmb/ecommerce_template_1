@@ -9,10 +9,10 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<PaymentController>(builder: (_) {
       return Directionality(
-        textDirection: paymentCtrl.appCtrl.isRTL ||
-            paymentCtrl.appCtrl.languageVal == "ar"
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection:
+            paymentCtrl.appCtrl.isRTL || paymentCtrl.appCtrl.languageVal == "ar"
+                ? TextDirection.rtl
+                : TextDirection.ltr,
         child: Scaffold(
           appBar: HomeProductAppBar(
             onTap: () => Get.back(),
@@ -49,10 +49,10 @@ class Payment extends StatelessWidget {
               CartBottomLayout(
                   desc: CartFont().viewDetail,
                   buttonName: PaymentFont().payNow,
-                 // totalAmount: paymentCtrl.totalAmount.toString(),
+                  // totalAmount: paymentCtrl.totalAmount.toString(),
                   totalAmount:
                       (double.parse(paymentCtrl.totalAmount.toString()) *
-                          paymentCtrl.appCtrl.rateValue)
+                              paymentCtrl.appCtrl.rateValue)
                           .toString(),
                   onTap: () {
                     Get.toNamed(routeName.orderSuccess,

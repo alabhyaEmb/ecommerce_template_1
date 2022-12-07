@@ -55,7 +55,12 @@ class BankDropDownSelection extends StatelessWidget {
                         },
                         items: paymentCtrl.bankList.map((String value) {
                           return DropdownMenuItem<String>(
-                              value: value, child: Text(value.tr,style: TextStyle(fontFamily: GoogleFonts.lato().fontFamily),));
+                              value: value,
+                              child: Text(
+                                value.tr,
+                                style: TextStyle(
+                                    fontFamily: GoogleFonts.lato().fontFamily),
+                              ));
                         }).toList())));
           }));
     });

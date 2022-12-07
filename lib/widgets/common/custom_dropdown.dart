@@ -1,7 +1,9 @@
 import 'package:multikart/config.dart';
 
 class CustomDropDown extends StatelessWidget {
-  final appCtrl = Get.isRegistered<AppController>() ? Get.find<AppController>() : Get.put(AppController());
+  final appCtrl = Get.isRegistered<AppController>()
+      ? Get.find<AppController>()
+      : Get.put(AppController());
 
   final dynamic dropdownValue;
   final ValueChanged<dynamic> onChangedValue;
@@ -76,7 +78,11 @@ class CustomDropDown extends StatelessWidget {
         items: dropDownOptions.map<DropdownMenuItem<dynamic>>((dynamic val) {
           return DropdownMenuItem<dynamic>(
             value: val,
-            child: Text(displayKey, style: AppCss.body2, overflow: TextOverflow.ellipsis,),
+            child: Text(
+              displayKey,
+              style: AppCss.body2,
+              overflow: TextOverflow.ellipsis,
+            ),
           );
         }).toList(),
       ),

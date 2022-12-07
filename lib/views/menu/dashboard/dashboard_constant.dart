@@ -1,5 +1,5 @@
-
 import 'package:get/get.dart';
+
 //text constants
 class DashboardFont {
   String dealsOfTheDay = "dealsOfTheDay".tr;
@@ -8,6 +8,4 @@ class DashboardFont {
   String profile = "profile".tr;
   String shoppingCart = "shoppingCart".tr;
   String steps = "steps".tr;
-
 }
-

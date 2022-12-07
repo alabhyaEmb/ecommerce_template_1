@@ -1,4 +1,3 @@
-
 import '../../../../config.dart';
 
 class FormTextBox extends StatelessWidget {
@@ -7,7 +6,7 @@ class FormTextBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:const [
+      children: const [
         CountryTextBox(),
         Space(0, 30),
         FullNameTextBox(),

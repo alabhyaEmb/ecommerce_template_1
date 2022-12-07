@@ -10,13 +10,13 @@ class HomeDealOfTheDayModel {
 
   HomeDealOfTheDayModel(
       {this.name,
-        this.image,
-        this.byWhom,
-        this.discount,
-        this.isFav,
-        this.mrp,
-        this.totalPrice,
-        this.isTrending});
+      this.image,
+      this.byWhom,
+      this.discount,
+      this.isFav,
+      this.mrp,
+      this.totalPrice,
+      this.isTrending});
 
   HomeDealOfTheDayModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];

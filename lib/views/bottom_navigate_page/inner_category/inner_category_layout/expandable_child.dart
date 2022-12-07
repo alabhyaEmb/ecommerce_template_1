@@ -5,7 +5,13 @@ class ChildExpandable extends StatelessWidget {
   final double? expandedHeight;
   final double? collapsedHeight;
   final Widget? child;
-  const ChildExpandable({Key? key,this.child,this.collapsedHeight = 0.0,this.expanded,this.expandedHeight = 300.0,}) : super(key: key);
+  const ChildExpandable({
+    Key? key,
+    this.child,
+    this.collapsedHeight = 0.0,
+    this.expanded,
+    this.expandedHeight = 300.0,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +20,12 @@ class ChildExpandable extends StatelessWidget {
         AnimatedContainer(
           duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
-          width:  MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width,
           height: expanded! ? expandedHeight : collapsedHeight,
           child: Container(
             child: child,
           ),
         ),
-
       ],
     );
   }

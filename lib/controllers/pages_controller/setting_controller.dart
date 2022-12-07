@@ -5,11 +5,13 @@ class SettingController extends GetxController {
       ? Get.find<AppController>()
       : Get.put(AppController());
 
- //setting list
+  //setting list
   var settingData = <ProfileModel>[
-    ProfileModel(icon: svgAssets.setting,title: 'Mode'.tr,subTitle: ''),
-    ProfileModel(icon: svgAssets.setting,title: 'RTL'.tr,subTitle: ''),
-    ProfileModel(icon: svgAssets.notification,title: 'Notification'.tr,subTitle: 'Offers, Order tracking messages..'.tr),
+    ProfileModel(icon: svgAssets.setting, title: 'Mode'.tr, subTitle: ''),
+    ProfileModel(icon: svgAssets.setting, title: 'RTL'.tr, subTitle: ''),
+    ProfileModel(
+        icon: svgAssets.notification,
+        title: 'Notification'.tr,
+        subTitle: 'Offers, Order tracking messages..'.tr),
   ];
-
 }

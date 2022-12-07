@@ -44,7 +44,6 @@ class DebitCreditLayout extends StatelessWidget {
                           paymentCtrl.expiryDateFocus, paymentCtrl.cVVFocus);
                     })),
             const Space(10, 0),
-
             Expanded(
                 child: CustomTextFormField(
                     radius: 5,
@@ -54,7 +53,11 @@ class DebitCreditLayout extends StatelessWidget {
                     keyboardType: TextInputType.name)),
           ]),
           const Space(0, 20),
-          CustomButton(title: PaymentFont().makePayment,width: 150,margin: 0,)
+          CustomButton(
+            title: PaymentFont().makePayment,
+            width: 150,
+            margin: 0,
+          )
         ],
       ).marginSymmetric(vertical: Insets.i20);
     });

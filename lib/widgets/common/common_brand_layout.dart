@@ -5,7 +5,7 @@ class CommonBrandLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GridView.builder(
+    return GridView.builder(
       padding: EdgeInsets.zero,
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,

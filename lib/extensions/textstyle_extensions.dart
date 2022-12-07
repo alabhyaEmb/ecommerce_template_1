@@ -74,6 +74,11 @@ extension TextStyleExtensions on TextStyle {
   TextStyle textFeatures(List<FontFeature> v) => copyWith(fontFeatures: v);
 
   /// Shortcut for decoration
-  TextStyle textDecoration(TextDecoration v, {Color? color, TextDecorationStyle? style, double thickness = 0}) =>
-      copyWith(decoration: v, decorationColor: color, decorationStyle: style, decorationThickness: thickness);
+  TextStyle textDecoration(TextDecoration v,
+          {Color? color, TextDecorationStyle? style, double thickness = 0}) =>
+      copyWith(
+          decoration: v,
+          decorationColor: color,
+          decorationStyle: style,
+          decorationThickness: thickness);
 }

@@ -5,14 +5,12 @@ class BorderLineLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return Container(
-          color: appCtrl.appTheme.lightGray,
-          width: MediaQuery.of(context).size.width,
-          height: AppScreenUtil().screenHeight(8),
-        );
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return Container(
+        color: appCtrl.appTheme.lightGray,
+        width: MediaQuery.of(context).size.width,
+        height: AppScreenUtil().screenHeight(8),
+      );
+    });
   }
 }

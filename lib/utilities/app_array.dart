@@ -6,7 +6,6 @@ class AppArray {
       ? Get.find<AppController>()
       : Get.put(AppController());
 
-
   var onBoardingList = <OnBoardingModel>[
     OnBoardingModel(
         title: 'Welcome to Biggest Online Store'.tr,
@@ -987,7 +986,7 @@ class AppArray {
       'USD': 0.69,
       'AUD': 1,
       'EUR': 0.68,
-      'INR':54.92
+      'INR': 54.92
     },
     {
       'icon': svgAssets.kpw,
@@ -998,7 +997,7 @@ class AppArray {
       'USD': 0.00076,
       'AUD': 0.0011,
       'EUR': 0.00075,
-      'INR':0.060
+      'INR': 0.060
     },
   ];
 

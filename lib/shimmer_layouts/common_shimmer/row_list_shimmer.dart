@@ -5,17 +5,14 @@ class RowListShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SingleChildScrollView(
+    return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(children: [
           ...AppArray().homeKidsCornerList.map((e) {
             return ProductShimmer(
               width: MediaQuery.of(context).size.width / 3,
-            ).marginOnly(
-                right: AppScreenUtil().screenWidth(10));
+            ).marginOnly(right: AppScreenUtil().screenWidth(10));
           }).toList()
-        ]))
-        .marginSymmetric(
-        horizontal: AppScreenUtil().screenWidth(15));
+        ])).marginSymmetric(horizontal: AppScreenUtil().screenWidth(15));
   }
 }

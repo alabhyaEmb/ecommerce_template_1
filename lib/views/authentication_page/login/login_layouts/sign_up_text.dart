@@ -5,15 +5,13 @@ class SignUpText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return CommonAccountText(
-            text1: CommonTextFont().ifYouAreNew,
-            text2: CommonTextFont().createNow,
-            textColor: appCtrl.appTheme.blackColor,
-            fontWeight: FontWeight.normal,
-            onTap: () => Get.toNamed(routeName.signUp));
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return CommonAccountText(
+          text1: CommonTextFont().ifYouAreNew,
+          text2: CommonTextFont().createNow,
+          textColor: appCtrl.appTheme.blackColor,
+          fontWeight: FontWeight.normal,
+          onTap: () => Get.toNamed(routeName.signUp));
+    });
   }
 }

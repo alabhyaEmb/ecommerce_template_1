@@ -5,24 +5,22 @@ class MobileNumberLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return Row(
-          children: [
-            LatoFontStyle(
-              text: '+981 215 1545',
-              fontWeight: FontWeight.normal,
-              color: appCtrl.appTheme.contentColor,
-              fontSize: FontSizes.f16,
-            ),
-            const Space(15, 0),
-            Image.asset(
-              iconAssets.edit,
-              height: AppScreenUtil().screenHeight(16),
-            )
-          ],
-        );
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return Row(
+        children: [
+          LatoFontStyle(
+            text: '+981 215 1545',
+            fontWeight: FontWeight.normal,
+            color: appCtrl.appTheme.contentColor,
+            fontSize: FontSizes.f16,
+          ),
+          const Space(15, 0),
+          Image.asset(
+            iconAssets.edit,
+            height: AppScreenUtil().screenHeight(16),
+          )
+        ],
+      );
+    });
   }
 }

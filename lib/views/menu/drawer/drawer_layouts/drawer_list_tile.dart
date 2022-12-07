@@ -25,25 +25,24 @@ class DrawerListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<AppController>(builder: (appCtrl) {
       return AnimatedBuilder(
-        animation: animationController!,
-        builder: (context, child) {
-          final card = Opacity(
-            opacity: animation!.value,
-            child: DrawerCard(
-              data: data,
-              index: index,
-              lastIndex: lastIndex,
-              onTap: onTap,
-            ),
-          );
+          animation: animationController!,
+          builder: (context, child) {
+            final card = Opacity(
+              opacity: animation!.value,
+              child: DrawerCard(
+                data: data,
+                index: index,
+                lastIndex: lastIndex,
+                onTap: onTap,
+              ),
+            );
 
-          return Transform(
-            transform: Matrix4.rotationY(rotateY!.value * math.pi),
-            alignment: Alignment.centerLeft,
-            child: card,
-          );
-        }
-      );
+            return Transform(
+              transform: Matrix4.rotationY(rotateY!.value * math.pi),
+              alignment: Alignment.centerLeft,
+              child: card,
+            );
+          });
     });
   }
 }

@@ -1,3 +1,5 @@
+import 'package:multikart/models/product_new_model.dart';
+
 import '../../config.dart';
 
 class ProductDetailController extends GetxController {
@@ -6,8 +8,10 @@ class ProductDetailController extends GetxController {
       : Get.put(AppController());
 
   TextEditingController controller = TextEditingController();
+  ProductNewModel? productNewModel;
   Product product = Product();
   List<Images> imagesList = [];
+
   int current = 0;
   List reviewList = [];
   int currentLast = 0;
@@ -19,11 +23,14 @@ class ProductDetailController extends GetxController {
   List<HomeFindStyleCategoryModel> similarList = [];
   int colorSelected = 1;
 
+  ProductDetailController({this.productNewModel});
+
   @override
   void onReady() {
     // TODO: implement onReady
+
     product = productList;
-  similarList = AppArray().similarProductList;
+    similarList = AppArray().similarProductList;
     for (var i = 0; i < product.images!.length; i++) {
       if (colorSelected == product.images![i].colorId) {
         imagesList.add(product.images![i]);
@@ -43,7 +50,7 @@ class ProductDetailController extends GetxController {
 
   //on quantity decrease
   quantityDecrease() {
-    int val =product.quantity!;
+    int val = product.quantity!;
     val--;
     if (product.quantity! <= 1) {
       product.quantity = 1;

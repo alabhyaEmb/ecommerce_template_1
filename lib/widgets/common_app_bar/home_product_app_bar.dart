@@ -4,7 +4,8 @@ class HomeProductAppBar extends StatelessWidget with PreferredSizeWidget {
   final GestureTapCallback? onTap;
   final Widget? titleChild;
 
-  const HomeProductAppBar({Key? key, this.onTap,this.titleChild}) : super(key: key);
+  const HomeProductAppBar({Key? key, this.onTap, this.titleChild})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

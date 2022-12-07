@@ -2,7 +2,7 @@ import 'package:multikart/config.dart';
 
 class CouponList extends StatelessWidget {
   final List<CouponModel>? couponList;
-  const CouponList({Key? key,this.couponList}) : super(key: key);
+  const CouponList({Key? key, this.couponList}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,11 @@ class CouponList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ...couponList!.asMap().entries.map((e) {
-          return CouponCard(couponModel: e.value,index: e.key,lastIndex: couponList!.length - 1,);
+          return CouponCard(
+            couponModel: e.value,
+            index: e.key,
+            lastIndex: couponList!.length - 1,
+          );
         }).toList()
       ],
     );

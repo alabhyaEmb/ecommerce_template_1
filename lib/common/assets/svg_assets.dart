@@ -1,4 +1,3 @@
-
 class SvgAssets {
   final String homeSvg = 'assets/svg/home.svg';
   final String homeColor = 'assets/svg/homeColor.svg';
@@ -51,5 +50,4 @@ class SvgAssets {
   final String eur = 'assets/svg/eur.svg';
   final String mode = 'assets/svg/mode.svg';
   final String rtl = 'assets/svg/rtl.svg';
-
 }

@@ -1,5 +1,3 @@
-
-
 import '../../../../config.dart';
 
 class RangeValueLayout extends StatelessWidget {
@@ -7,16 +5,17 @@ class RangeValueLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GetBuilder<FilterController>(
-      builder: (filterCtrl) {
-        return Stack(
-          children: [
-            CustomValueLayout(val: filterCtrl.currentRangeValues.start.toString(),),
-            CustomValueLayout(val: filterCtrl.currentRangeValues.end.toString(),),
-
-          ],
-        );
-      }
-    );
+    return GetBuilder<FilterController>(builder: (filterCtrl) {
+      return Stack(
+        children: [
+          CustomValueLayout(
+            val: filterCtrl.currentRangeValues.start.toString(),
+          ),
+          CustomValueLayout(
+            val: filterCtrl.currentRangeValues.end.toString(),
+          ),
+        ],
+      );
+    });
   }
 }

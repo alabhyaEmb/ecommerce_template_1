@@ -17,7 +17,6 @@ class OfferTimeLayout extends StatelessWidget {
                   : Alignment.centerRight,
           children: [
             Container(
-
               margin: EdgeInsets.only(
                   top: AppScreenUtil().screenHeight(10),
                   bottom: AppScreenUtil().screenHeight(20)),

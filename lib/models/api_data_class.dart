@@ -4,7 +4,8 @@ class APIDataClass {
   String? message;
   bool? validation;
 
-  APIDataClass({required this.isSuccess, this.data, this.message, this.validation});
+  APIDataClass(
+      {required this.isSuccess, this.data, this.message, this.validation});
 
   factory APIDataClass.fromJson(Map<String, dynamic> json) {
     return APIDataClass(

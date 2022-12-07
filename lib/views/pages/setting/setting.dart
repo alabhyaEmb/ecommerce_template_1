@@ -10,10 +10,9 @@ class Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SettingController>(builder: (_) {
-      return  Directionality(
-        textDirection: settingCtrl.appCtrl.isRTL
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+      return Directionality(
+        textDirection:
+            settingCtrl.appCtrl.isRTL ? TextDirection.rtl : TextDirection.ltr,
         child: Scaffold(
           appBar: AppBar(
             centerTitle: false,
@@ -44,7 +43,9 @@ class Setting extends StatelessWidget {
 
                 //setting list
                 ...settingCtrl.settingData.asMap().entries.map((e) {
-                  return SettingCard(profileModel: e.value,);
+                  return SettingCard(
+                    profileModel: e.value,
+                  );
                 })
               ],
             ),

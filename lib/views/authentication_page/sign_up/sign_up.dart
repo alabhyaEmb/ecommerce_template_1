@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
         child: Scaffold(
           body: Directionality(
             textDirection: signUpCtrl.appCtrl.isRTL ||
-                signUpCtrl.appCtrl.languageVal == "ar"
+                    signUpCtrl.appCtrl.languageVal == "ar"
                 ? TextDirection.rtl
                 : TextDirection.ltr,
             child: Form(
@@ -21,7 +21,8 @@ class SignUpScreen extends StatelessWidget {
                     child: Column(children: [
                   //app bar layout
                   AuthenticationAppBar(
-                      isDone: false, onTap: () => Get.toNamed(routeName.dashboard)),
+                      isDone: false,
+                      onTap: () => Get.toNamed(routeName.dashboard)),
                   const Space(0, 20),
 
                   //hey and sign up text layout
@@ -56,7 +57,7 @@ class SignUpScreen extends StatelessWidget {
                   const Space(0, 20),
 
                   //social login layout
-                   SocialLoginLayout(),
+                  SocialLoginLayout(),
                   const Space(0, 30),
 
                   //already account and sign in layout

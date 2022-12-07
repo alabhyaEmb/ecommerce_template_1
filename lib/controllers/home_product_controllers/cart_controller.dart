@@ -22,7 +22,7 @@ class CartController extends GetxController {
   //common bottom sheet
   bottomSheetLayout(text) {
     Get.bottomSheet(
-      CommonBottomSheet(text:text),
+      CommonBottomSheet(text: text),
       backgroundColor: Colors.white,
       elevation: 0,
       shape: RoundedRectangleBorder(

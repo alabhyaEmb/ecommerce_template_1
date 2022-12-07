@@ -26,9 +26,11 @@ class OrderHistorySizeQty extends StatelessWidget {
         const Space(0, 5),
         OrderHistoryWidget()
             .viewDetailText(daysWiseList!.status, daysWiseList!.deliveryStatus),
-      ]).marginOnly(left: AppScreenUtil().screenWidth(appCtrl.isRTL ||
-          appCtrl.languageVal == "ar" ? 0 :15),right: AppScreenUtil().screenWidth(appCtrl.isRTL ||
-          appCtrl.languageVal == "ar" ? 15:0));
+      ]).marginOnly(
+          left: AppScreenUtil().screenWidth(
+              appCtrl.isRTL || appCtrl.languageVal == "ar" ? 0 : 15),
+          right: AppScreenUtil().screenWidth(
+              appCtrl.isRTL || appCtrl.languageVal == "ar" ? 15 : 0));
     });
   }
 }

@@ -119,7 +119,7 @@ class AppTheme {
           secondary: const Color(0xFF6EBAE7),
           accentTxt: const Color(0xFF001928),
           bg1: const Color(0xFF151A1E),
-          bgColor:const Color(0xFF262626),
+          bgColor: const Color(0xFF262626),
           surface: const Color(0xFF151A1E),
           error: const Color(0xFFd32f2f),
           //Extra

@@ -1,5 +1,5 @@
-
 import 'package:get/get.dart';
+
 //text constants
 class OtpFont {
   String done = "done".tr;
@@ -8,4 +8,3 @@ class OtpFont {
   String notGetCode = "notGetCode".tr;
   String resend = "resend".tr;
 }
-

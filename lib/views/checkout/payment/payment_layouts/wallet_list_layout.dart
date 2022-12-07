@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:multikart/config.dart';
 
-
 class WalletListLayout extends StatelessWidget {
   final List? child;
   final bool isDropDown;
@@ -42,7 +41,13 @@ class WalletListLayout extends StatelessWidget {
             });
           }).toList(),
           const Space(0, 20),
-           (isDropDown) ? const BankDropDownSelection() :  CustomButton(title: PaymentFont().makePayment,width: 150,margin: 0,)
+          (isDropDown)
+              ? const BankDropDownSelection()
+              : CustomButton(
+                  title: PaymentFont().makePayment,
+                  width: 150,
+                  margin: 0,
+                )
         ],
       );
     });

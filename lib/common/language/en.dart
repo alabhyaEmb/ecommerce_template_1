@@ -591,7 +591,8 @@ final dynamic en = {
   "Find Products, Banner, Sale": "Find Products, Banner, Sale",
   "Cart, Order & Payment": "Cart, Order & Payment",
   "Add your Products & Placed Order": "Add your Products & Placed Order",
-  "Check Order History, tracking pages..": "Check Order History, tracking pages..",
+  "Check Order History, tracking pages..":
+      "Check Order History, tracking pages..",
   "deliveryBy": "Delivery By",
   "off": "off",
   "ratings": "ratings",
@@ -604,5 +605,4 @@ final dynamic en = {
   "on": "ON",
   "yes": "yes",
   "no": "no",
-
 };

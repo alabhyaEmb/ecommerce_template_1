@@ -21,7 +21,8 @@ class LoginWidget {
   }
 
   //forgot password  Layout
-  Widget forgotPasswordLayout({var color,String? text,GestureTapCallback? onTap}) {
+  Widget forgotPasswordLayout(
+      {var color, String? text, GestureTapCallback? onTap}) {
     return Container(
       padding:
           EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),

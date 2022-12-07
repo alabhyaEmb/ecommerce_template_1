@@ -11,18 +11,17 @@ class OtpScreen extends StatelessWidget {
       return Scaffold(
         resizeToAvoidBottomInset: false,
         body: Directionality(
-          textDirection: otpCtrl.appCtrl.isRTL ||
-              otpCtrl.appCtrl.languageVal == "ar"
-              ? TextDirection.rtl
-              : TextDirection.ltr,
+          textDirection:
+              otpCtrl.appCtrl.isRTL || otpCtrl.appCtrl.languageVal == "ar"
+                  ? TextDirection.rtl
+                  : TextDirection.ltr,
           child: SingleChildScrollView(
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
-                    //body layout
+                //body layout
                 const OtpBody(),
 
                 // done button layout

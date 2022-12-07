@@ -1,6 +1,5 @@
 import 'package:multikart/config.dart';
 
-
 class PaymentExpandableList extends StatelessWidget {
   final dynamic data;
   final int? index;
@@ -14,7 +13,16 @@ class PaymentExpandableList extends StatelessWidget {
       child: Column(
         children: [
           if (data.containsKey('child'))
-            index == 1 ? const DebitCreditLayout() :index == 2 ?  WalletListLayout(child: data['child'],) : WalletListLayout(child: data['child'],isDropDown: false,)
+            index == 1
+                ? const DebitCreditLayout()
+                : index == 2
+                    ? WalletListLayout(
+                        child: data['child'],
+                      )
+                    : WalletListLayout(
+                        child: data['child'],
+                        isDropDown: false,
+                      )
         ],
       ),
     );

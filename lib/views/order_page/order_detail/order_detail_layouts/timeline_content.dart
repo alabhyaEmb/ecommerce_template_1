@@ -9,8 +9,9 @@ class TimeLineContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<AppController>(builder: (appCtrl) {
       return Padding(
-          padding:  EdgeInsets.only(left: 8.0,right: appCtrl.isRTL ||
-              appCtrl.languageVal == "ar" ? 8.0 :0),
+          padding: EdgeInsets.only(
+              left: 8.0,
+              right: appCtrl.isRTL || appCtrl.languageVal == "ar" ? 8.0 : 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,

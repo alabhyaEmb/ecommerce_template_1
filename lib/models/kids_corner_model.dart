@@ -8,7 +8,15 @@ class HomeKidsCornerModel {
   bool? isFav;
   double? rating;
 
-  HomeKidsCornerModel({required this.name, this.image,this.categoryId,this.totalPrice,this.mrp,this.discount,this.isFav,this.rating});
+  HomeKidsCornerModel(
+      {required this.name,
+      this.image,
+      this.categoryId,
+      this.totalPrice,
+      this.mrp,
+      this.discount,
+      this.isFav,
+      this.rating});
 
   factory HomeKidsCornerModel.fromJson(Map<dynamic, dynamic> json) {
     return HomeKidsCornerModel(

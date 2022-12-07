@@ -13,9 +13,8 @@ class IconAssets {
   final String share = 'assets/icons/homeIcon/share.png';
 
   //payment method
- final String wallet = 'assets/icons/wallet.png';
+  final String wallet = 'assets/icons/wallet.png';
   final String cash = 'assets/icons/cash.png';
   final String netBanking = 'assets/icons/netBanking.png';
   final String card = 'assets/icons/card.png';
-
 }

@@ -2,7 +2,7 @@ class PageList {
   String? pageName;
   String? routeName;
 
-  PageList({this.pageName,this.routeName});
+  PageList({this.pageName, this.routeName});
 
   PageList.fromJson(Map<String, dynamic> json) {
     pageName = json['pageName'];

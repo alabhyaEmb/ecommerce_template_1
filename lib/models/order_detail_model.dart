@@ -10,7 +10,7 @@ class OrderDetail {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data =  <String, dynamic>{};
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['title'] = title;
     data['value'] = value;
     return data;

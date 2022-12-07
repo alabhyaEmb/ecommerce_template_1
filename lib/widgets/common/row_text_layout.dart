@@ -32,7 +32,7 @@ class RowTextLayout extends StatelessWidget {
               appCtrl.isSearch = false;
               appCtrl.selectedIndex = 1;
               appCtrl.update();
-              Get.toNamed(routeName.shopPage,arguments: "All");
+              Get.toNamed(routeName.shopPage, arguments: "All");
             },
           ),
         ],

@@ -1,5 +1,3 @@
-
-
 import '../../../../config.dart';
 
 class AddressTypeLayout extends StatelessWidget {

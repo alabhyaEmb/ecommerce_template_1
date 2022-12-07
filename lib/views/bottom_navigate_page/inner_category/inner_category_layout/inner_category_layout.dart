@@ -15,7 +15,7 @@ class InnerCategoryLayout extends StatelessWidget {
             child: ExpandableListView(
               onPressed: () => innerCtrl.expandBox(index),
               index: index,
-                childLength : innerCtrl.innerCategoryList[index]['child'].length,
+              childLength: innerCtrl.innerCategoryList[index]['child'].length,
               title: innerCtrl.innerCategoryList[index]['name'].toString(),
               isExpanded: index == innerCtrl.tapped ? innerCtrl.expand : false,
               child: SelectCardList(

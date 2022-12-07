@@ -1,4 +1,3 @@
-
 import '../../../../config.dart';
 
 class OtpNumberLayout extends StatelessWidget {

@@ -5,22 +5,18 @@ class LandmarkTextBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AddAddressController>(
-      builder: (addAddressCtrl) {
-        return CustomTextFormField(
-          radius: 5,
-          labelText: AddAddressFont().landmark,
-          controller: addAddressCtrl.txtLandmark,
-          focusNode: addAddressCtrl.landmarkFocus,
-          keyboardType: TextInputType.name,
-          onFieldSubmitted: (value) {
-            AddAddressWidget().fieldFocusChange(
-                context,
-                addAddressCtrl.landmarkFocus,
-                addAddressCtrl.townCityFocus);
-          },
-        );
-      }
-    );
+    return GetBuilder<AddAddressController>(builder: (addAddressCtrl) {
+      return CustomTextFormField(
+        radius: 5,
+        labelText: AddAddressFont().landmark,
+        controller: addAddressCtrl.txtLandmark,
+        focusNode: addAddressCtrl.landmarkFocus,
+        keyboardType: TextInputType.name,
+        onFieldSubmitted: (value) {
+          AddAddressWidget().fieldFocusChange(context,
+              addAddressCtrl.landmarkFocus, addAddressCtrl.townCityFocus);
+        },
+      );
+    });
   }
 }

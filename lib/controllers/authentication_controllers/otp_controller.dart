@@ -1,4 +1,3 @@
-
 import 'package:multikart/config.dart';
 
 class OtpController extends GetxController {
@@ -15,7 +14,6 @@ class OtpController extends GetxController {
   TextEditingController fieldThree = TextEditingController();
   TextEditingController fieldFour = TextEditingController();
 
-
   @override
   void onReady() async {
     fieldOne;
@@ -25,5 +23,4 @@ class OtpController extends GetxController {
     update();
     super.onReady();
   }
-
 }

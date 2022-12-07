@@ -5,15 +5,13 @@ class NotificationIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AppController>(
-      builder: (appCtrl) {
-        return SvgPicture.asset(
-          svgAssets.notification,
-          color: appCtrl.appTheme.blackColor,
-          fit: BoxFit.contain,
-          height: AppScreenUtil().size(20),
-        ).gestures(onTap: ()=> Get.toNamed(routeName.notification));
-      }
-    );
+    return GetBuilder<AppController>(builder: (appCtrl) {
+      return SvgPicture.asset(
+        svgAssets.notification,
+        color: appCtrl.appTheme.blackColor,
+        fit: BoxFit.contain,
+        height: AppScreenUtil().size(20),
+      ).gestures(onTap: () => Get.toNamed(routeName.notification));
+    });
   }
 }

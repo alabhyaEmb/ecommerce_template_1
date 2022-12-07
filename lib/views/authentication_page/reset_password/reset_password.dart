@@ -11,7 +11,7 @@ class ResetPassword extends StatelessWidget {
       return Scaffold(
         body: Directionality(
           textDirection: resetPasswordCtrl.appCtrl.isRTL ||
-              resetPasswordCtrl.appCtrl.languageVal == "ar"
+                  resetPasswordCtrl.appCtrl.languageVal == "ar"
               ? TextDirection.rtl
               : TextDirection.ltr,
           child: Form(

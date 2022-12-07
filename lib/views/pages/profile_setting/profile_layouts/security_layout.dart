@@ -14,8 +14,7 @@ class SecurityLayout extends StatelessWidget {
           ProfileWidget().securityTextBox(ProfileFont().dob,
               keyboardType: TextInputType.phone,
               focusNode: profileCtrl.mobileNumberFocus,
-              controller: profileCtrl.txtPhone,
-              onFieldSubmitted: (value) {
+              controller: profileCtrl.txtPhone, onFieldSubmitted: (value) {
             AddAddressWidget().fieldFocusChange(
               context,
               profileCtrl.mobileNumberFocus,

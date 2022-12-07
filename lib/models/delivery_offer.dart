@@ -21,8 +21,7 @@ class DeliverOfferModel {
     data['title'] = title;
     data['description'] = description;
     if (deliveryOffer != null) {
-      data['deliveryOffer'] =
-          deliveryOffer!.map((v) => v.toJson()).toList();
+      data['deliveryOffer'] = deliveryOffer!.map((v) => v.toJson()).toList();
     }
     return data;
   }

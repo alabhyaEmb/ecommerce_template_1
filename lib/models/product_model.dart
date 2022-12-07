@@ -37,7 +37,8 @@ class Product {
       this.images,
       this.detail,
       this.reviews,
-      this.offer,this.deliverOfferModel});
+      this.offer,
+      this.deliverOfferModel});
 
   Product.fromJson(Map<String, dynamic> json) {
     name = json['name'];
@@ -82,7 +83,9 @@ class Product {
       });
     }
     offer = json['offer'] != null ? Offer.fromJson(json['offer']) : null;
-    deliverOfferModel = json['deliverOfferModel'] != null ? DeliverOfferModel.fromJson(json['deliverOfferModel']) : null;
+    deliverOfferModel = json['deliverOfferModel'] != null
+        ? DeliverOfferModel.fromJson(json['deliverOfferModel'])
+        : null;
   }
 
   Map<String, dynamic> toJson() {

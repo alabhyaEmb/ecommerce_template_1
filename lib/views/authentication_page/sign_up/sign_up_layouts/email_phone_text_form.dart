@@ -8,7 +8,7 @@ class SignUpEmailPhoneTextForm extends StatelessWidget {
     return GetBuilder<SignUpController>(builder: (signUpCtrl) {
       return Padding(
         padding:
-        EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),
+            EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),
         child: CustomTextFormField(
           radius: 5,
           labelText: SignUpFont().emailPhone,
@@ -19,7 +19,8 @@ class SignUpEmailPhoneTextForm extends StatelessWidget {
             SignUpWidget().fieldFocusChange(
                 context, signUpCtrl.emailFocus, signUpCtrl.passwordFocus);
           },
-          validator: (value) => CommonValidation().checkEmailOrPhoneValidation(value),
+          validator: (value) =>
+              CommonValidation().checkEmailOrPhoneValidation(value),
         ),
       );
     });

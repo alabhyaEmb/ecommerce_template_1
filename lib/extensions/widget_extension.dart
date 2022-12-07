@@ -8,7 +8,8 @@ import 'package:flutter/rendering.dart';
 typedef GestureOnTapChangeCallback = void Function(bool tapState);
 
 extension StyledWidget on Widget {
-  Widget parent(Widget Function({required Widget child}) parent) => parent(child: this);
+  Widget parent(Widget Function({required Widget child}) parent) =>
+      parent(child: this);
 
   Widget padding({
     double? all,
@@ -84,12 +85,14 @@ extension StyledWidget on Widget {
         child: this,
       );
 
-  Widget backgroundImage(DecorationImage image, {bool animate = false}) => DecoratedBox(
+  Widget backgroundImage(DecorationImage image, {bool animate = false}) =>
+      DecoratedBox(
         decoration: BoxDecoration(image: image),
         child: this,
       );
 
-  Widget backgroundGradient(Gradient gradient, {bool animate = false}) => DecoratedBox(
+  Widget backgroundGradient(Gradient gradient, {bool animate = false}) =>
+      DecoratedBox(
         decoration: BoxDecoration(gradient: gradient),
         child: this,
       );
@@ -119,7 +122,16 @@ extension StyledWidget on Widget {
     );
   }
 
-  Widget backgroundRadialGradient({AlignmentGeometry center = Alignment.center, double radius = 0.5, List<Color>? colors, List<double>? stops, TileMode tileMode = TileMode.clamp, AlignmentGeometry? focal, double focalRadius = 0.0, GradientTransform? transform, bool animate = false}) {
+  Widget backgroundRadialGradient(
+      {AlignmentGeometry center = Alignment.center,
+      double radius = 0.5,
+      List<Color>? colors,
+      List<double>? stops,
+      TileMode tileMode = TileMode.clamp,
+      AlignmentGeometry? focal,
+      double focalRadius = 0.0,
+      GradientTransform? transform,
+      bool animate = false}) {
     BoxDecoration decoration = BoxDecoration(
       gradient: RadialGradient(
         center: center,
@@ -138,7 +150,15 @@ extension StyledWidget on Widget {
     );
   }
 
-  Widget backgroundSweepGradient({AlignmentGeometry center = Alignment.center, double startAngle = 0.0, double endAngle = pi * 2, List<Color>? colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform, bool animate = false}) {
+  Widget backgroundSweepGradient(
+      {AlignmentGeometry center = Alignment.center,
+      double startAngle = 0.0,
+      double endAngle = pi * 2,
+      List<Color>? colors,
+      List<double>? stops,
+      TileMode tileMode = TileMode.clamp,
+      GradientTransform? transform,
+      bool animate = false}) {
     BoxDecoration decoration = BoxDecoration(
       gradient: SweepGradient(
         center: center,
@@ -156,7 +176,8 @@ extension StyledWidget on Widget {
     );
   }
 
-  Widget backgroundBlendMode(BlendMode blendMode, {bool animate = false}) => DecoratedBox(
+  Widget backgroundBlendMode(BlendMode blendMode, {bool animate = false}) =>
+      DecoratedBox(
         decoration: BoxDecoration(backgroundBlendMode: blendMode),
         child: this,
       );
@@ -265,10 +286,18 @@ extension StyledWidget on Widget {
   }) {
     BoxDecoration decoration = BoxDecoration(
       border: Border(
-        left: (left ?? all) == null ? BorderSide.none : BorderSide(color: color, width: left ?? all ?? 0, style: style),
-        right: (right ?? all) == null ? BorderSide.none : BorderSide(color: color, width: right ?? all ?? 0, style: style),
-        top: (top ?? all) == null ? BorderSide.none : BorderSide(color: color, width: top ?? all ?? 0, style: style),
-        bottom: (bottom ?? all) == null ? BorderSide.none : BorderSide(color: color, width: bottom ?? all ?? 0, style: style),
+        left: (left ?? all) == null
+            ? BorderSide.none
+            : BorderSide(color: color, width: left ?? all ?? 0, style: style),
+        right: (right ?? all) == null
+            ? BorderSide.none
+            : BorderSide(color: color, width: right ?? all ?? 0, style: style),
+        top: (top ?? all) == null
+            ? BorderSide.none
+            : BorderSide(color: color, width: top ?? all ?? 0, style: style),
+        bottom: (bottom ?? all) == null
+            ? BorderSide.none
+            : BorderSide(color: color, width: bottom ?? all ?? 0, style: style),
       ),
     );
     return DecoratedBox(
@@ -306,7 +335,10 @@ extension StyledWidget on Widget {
     );
   }
 
-  Widget elevation(double elevation, {BorderRadiusGeometry borderRadius = BorderRadius.zero, Color shadowColor = const Color(0xFF000000)}) => Material(
+  Widget elevation(double elevation,
+          {BorderRadiusGeometry borderRadius = BorderRadius.zero,
+          Color shadowColor = const Color(0xFF000000)}) =>
+      Material(
         color: Colors.transparent,
         elevation: elevation,
         borderRadius: borderRadius,
@@ -352,7 +384,9 @@ extension StyledWidget on Widget {
       minHeight: minHeight,
       maxHeight: maxHeight,
     );
-    constraints = (width != null || height != null) ? constraints.tighten(width: width, height: height) : constraints;
+    constraints = (width != null || height != null)
+        ? constraints.tighten(width: width, height: height)
+        : constraints;
     return ConstrainedBox(
       constraints: constraints,
       child: this,
@@ -387,7 +421,8 @@ extension StyledWidget on Widget {
       Builder(
         builder: (BuildContext context) {
           // TODO: PERFORMANCE: findAncestorWidgetOfExactType vs InheritedWidget performance
-          GestureDetector? gestures = context.findAncestorWidgetOfExactType<GestureDetector>();
+          GestureDetector? gestures =
+              context.findAncestorWidgetOfExactType<GestureDetector>();
           return Material(
             color: Colors.transparent,
             child: InkWell(

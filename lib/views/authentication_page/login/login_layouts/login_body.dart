@@ -51,7 +51,6 @@ class LoginBody extends StatelessWidget {
           } else {
             log('No Valid');
           }
-
         }),
         const Space(0, 20),
 

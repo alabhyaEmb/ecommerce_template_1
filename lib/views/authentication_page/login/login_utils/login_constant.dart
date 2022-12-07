@@ -9,4 +9,3 @@ class LoginFont {
 
   String forgotPassword = "forgotPassword".tr;
 }
-
