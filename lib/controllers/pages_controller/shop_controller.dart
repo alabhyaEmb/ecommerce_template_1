@@ -67,6 +67,13 @@ class ShopController extends GetxController {
     );
   }
 
+  fetchData() async {
+    categoryNewModelList = await apiService.getCategories(parentId: productId);
+    productNewModelList =
+        await apiService.getCategoryProducts(categoryId: productId);
+    update();
+  }
+
   //bottom change
   bottomNavigationChange(val, context) async {
     Get.back();

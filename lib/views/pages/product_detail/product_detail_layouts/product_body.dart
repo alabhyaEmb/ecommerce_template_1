@@ -1,3 +1,5 @@
+import 'package:multikart/widgets/common_product_card/common_product_card1.dart';
+
 import '../../../../../config.dart';
 
 class ProductBody extends StatelessWidget {
@@ -28,7 +30,25 @@ class ProductBody extends StatelessWidget {
                 fontSize: FontSizes.f14),
 
             //similar product layout
-            SimilarProductLayout(data: productCtrl.similarList),
+
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                  productCtrl.similarProductList!.length,
+                  (index) => CommonProductCard1(
+                          data: productCtrl.similarProductList![index])
+                      .paddingOnly(
+                    right: AppScreenUtil().screenWidth(10),
+                  ),
+                ),
+              ).marginOnly(
+                left: AppScreenUtil().screenWidth(15),
+                top: AppScreenUtil().screenHeight(10),
+                bottom: AppScreenUtil().screenHeight(60),
+              ),
+            )
+            // SimilarProductLayout(data: productCtrl.similarList),
           ],
         ),
       );

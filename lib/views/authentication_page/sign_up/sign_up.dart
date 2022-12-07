@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:multikart/config.dart';
+import 'package:multikart/views/authentication_page/sign_up/sign_up_layouts/last_name_text_form.dart';
 
 class SignUpScreen extends StatelessWidget {
   final signUpCtrl = Get.put(SignUpController());
@@ -35,7 +38,10 @@ class SignUpScreen extends StatelessWidget {
                   const Space(0, 35),
 
                   //name text box layout
-                  const SignupNameTextForm(),
+                  const SignupFirstNameTextForm(),
+                  const Space(0, 15),
+
+                  const SignupLastNameTextForm(),
                   const Space(0, 15),
 
                   //email text box layout
@@ -47,10 +53,40 @@ class SignUpScreen extends StatelessWidget {
                   const Space(0, 35),
 
                   //button layout
-                  CustomButton(
-                      title: SignUpFont().signUp.toUpperCase(),
-                      onTap: () => signUpCtrl.signIn()),
-                  const Space(0, 20),
+                  SignInButton(
+                    title: SignUpFont().signUp.toUpperCase(),
+                    onTap: () async {
+                      FocusScopeNode currentFocus = FocusScope.of(Get.context!);
+                      if (!currentFocus.hasPrimaryFocus) {
+                        currentFocus.unfocus();
+                      }
+                      if (signUpCtrl.signupFormKey.currentState!.validate()) {
+                        var result = await signUpCtrl.apiService.userSignUp(
+                            email: signUpCtrl.txtEmail.text,
+                            password: signUpCtrl.txtPassword.text,
+                            firstName: signUpCtrl.txtFirstName.text,
+                            lastName: signUpCtrl.txtLastName.text);
+                        if (result['status'] == 0) {
+                          log(result.toString());
+                          signUpCtrl.update();
+                        } else {
+                          log(result.toString());
+                          appCtrl.storage
+                              .write(Session.authToken, result['token']);
+                          appCtrl.storage.write(Session.isLogin, true);
+                          log('SignedIn');
+                          Get.toNamed(routeName.dashboard);
+                        }
+                      } else {
+                        log('No Valid');
+                      }
+                    },
+                  ),
+
+                  // CustomButton(
+                  //     title: SignUpFont().signUp.toUpperCase(),
+                  //     onTap: () => signUpCtrl.signIn()),
+                  // const Space(0, 20),
 
                   //or sign in with text layout
                   const OrSignInWith(),

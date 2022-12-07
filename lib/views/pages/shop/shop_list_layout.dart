@@ -1,4 +1,4 @@
-import 'package:multikart/views/pages/shop/shop_list_card.dart';
+import 'package:multikart/widgets/common_product_card/common_product_card1.dart';
 
 import '../../../config.dart';
 
@@ -16,7 +16,10 @@ class ShopListLayout extends StatelessWidget {
               shrinkWrap: true,
               itemCount: shopCtrl.productNewModelList.length,
               itemBuilder: (context, index) {
-                return ShopListCard(data: shopCtrl.productNewModelList[index]);
+                return CommonProductCard1(
+                    data: shopCtrl.productNewModelList[index]);
+
+                // ShopListCard();
               },
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,

@@ -10,6 +10,7 @@ class ShopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    shopCtrl.fetchData();
     return GetBuilder<ShopController>(builder: (_) {
       return Directionality(
         textDirection:

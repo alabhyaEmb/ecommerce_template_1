@@ -1,7 +1,7 @@
 import '../../../../config.dart';
 
-class SignupNameTextForm extends StatelessWidget {
-  const SignupNameTextForm({Key? key}) : super(key: key);
+class SignupFirstNameTextForm extends StatelessWidget {
+  const SignupFirstNameTextForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,13 @@ class SignupNameTextForm extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: AppScreenUtil().screenWidth(15)),
         child: CustomTextFormField(
           radius: 5,
-          labelText: SignUpFont().name,
-          controller: signUpCtrl.txtName,
-          focusNode: signUpCtrl.nameFocus,
+          labelText: SignUpFont().firstName,
+          controller: signUpCtrl.txtFirstName,
+          focusNode: signUpCtrl.firstNameFocus,
           keyboardType: TextInputType.text,
           onFieldSubmitted: (value) {
             SignUpWidget().fieldFocusChange(
-                context, signUpCtrl.nameFocus, signUpCtrl.emailFocus);
+                context, signUpCtrl.firstNameFocus, signUpCtrl.lastNameFocus);
           },
         ),
       );

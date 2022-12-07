@@ -3,13 +3,17 @@ import 'package:multikart/utilities/commom_utils.dart';
 
 import '../../../../../config.dart';
 
-class ShopListCard extends StatelessWidget {
+class CommonProductCard1 extends StatelessWidget {
   final ProductNewModel? data;
   final bool isDiscountShow, isFit;
 
-  const ShopListCard(
+  CommonProductCard1(
       {Key? key, this.data, this.isDiscountShow = true, this.isFit = true})
       : super(key: key);
+
+  final appCtrl = Get.isRegistered<AppController>()
+      ? Get.find<AppController>()
+      : Get.put(AppController());
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,11 @@ class ShopListCard extends StatelessWidget {
 
     return GetBuilder<AppController>(builder: (appCtrl) {
       return InkWell(
-        onTap: () => Get.toNamed(routeName.productDetail, arguments: data),
+        onTap: () =>
+            // appCtrl.goToProductArgDetail(data!),
+
+            Get.toNamed(routeName.productDetail,
+                arguments: {'data': data!}, preventDuplicates: false),
 
         //  appCtrl.goToProductDetail(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

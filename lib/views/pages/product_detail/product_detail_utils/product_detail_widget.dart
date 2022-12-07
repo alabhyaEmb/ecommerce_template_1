@@ -1,3 +1,5 @@
+import 'package:flutter_html/flutter_html.dart';
+
 import '../../../../../config.dart';
 
 class ProductDetailWidget {
@@ -20,15 +22,33 @@ class ProductDetailWidget {
 
   //description text
   Widget descriptionText(text) {
-    return LatoFontStyle(
+    return
+
+        // Html(data: text);
+
+        LatoFontStyle(
       text: text,
       fontSize: FontSizes.f12,
       fontWeight: FontWeight.normal,
       color: appCtrl.appTheme.contentColor,
       overflow: TextOverflow.clip,
     ).marginSymmetric(
-        horizontal: AppScreenUtil().screenWidth(15),
-        vertical: AppScreenUtil().screenHeight(5));
+            horizontal: AppScreenUtil().screenWidth(15),
+            vertical: AppScreenUtil().screenHeight(5));
+  }
+
+  Widget htmlDescription(text) {
+    return Html(data: text);
+
+    // LatoFontStyle(
+    //   text: text,
+    //   fontSize: FontSizes.f12,
+    //   fontWeight: FontWeight.normal,
+    //   color: appCtrl.appTheme.contentColor,
+    //   overflow: TextOverflow.clip,
+    // ).marginSymmetric(
+    //     horizontal: AppScreenUtil().screenWidth(15),
+    //     vertical: AppScreenUtil().screenHeight(5));
   }
 
   //price text

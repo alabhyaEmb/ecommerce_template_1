@@ -2,6 +2,7 @@ import 'dart:developer';
 
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:multikart/config.dart';
+import 'package:multikart/services/api_service.dart';
 
 class SignUpController extends GetxController {
   final appCtrl = Get.isRegistered<AppController>()
@@ -14,12 +15,15 @@ class SignUpController extends GetxController {
 
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
-  TextEditingController txtName = TextEditingController();
+  TextEditingController txtFirstName = TextEditingController();
+  TextEditingController txtLastName = TextEditingController();
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
   final FocusNode emailFocus = FocusNode();
   final FocusNode passwordFocus = FocusNode();
-  final FocusNode nameFocus = FocusNode();
+  final FocusNode firstNameFocus = FocusNode();
+  final FocusNode lastNameFocus = FocusNode();
   bool passwordVisible = true;
+  ApiService apiService = ApiService();
   // var auth = FirebaseAuth.instance;
 
   // Toggle Between Password show
@@ -31,7 +35,8 @@ class SignUpController extends GetxController {
   //sign in
   signIn() async {
     if (signupFormKey.currentState!.validate()) {
-      txtName.text = "";
+      txtFirstName.text = "";
+      txtLastName.text = "";
       txtEmail.text = "";
       txtPassword.text = "";
       FocusScope.of(Get.context!).requestFocus(FocusNode());

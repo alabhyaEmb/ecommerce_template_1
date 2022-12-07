@@ -1,4 +1,5 @@
 import 'package:multikart/models/category_new_model.dart';
+import 'package:multikart/utilities/commom_utils.dart';
 
 import '../../../../../config.dart';
 
@@ -26,6 +27,9 @@ class ShopCategoryData extends StatelessWidget {
           // shopCtrl.appCtrl.isShimmer = false;
           // shopCtrl.appCtrl.update();
           // Get.forceAppUpdate();
+
+          Get.toNamed(routeName.shopPage,
+              arguments: {'name': data!.name, 'id': data!.id});
         },
         child: Padding(
           padding: EdgeInsets.only(
@@ -42,7 +46,11 @@ class ShopCategoryData extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: data!.image!.src == null
-                    ? const Center(child: Text('No Image'))
+                    ? Center(
+                        child: Text(
+                          CommonUtils.getInitials(data!.name!),
+                        ),
+                      )
                     : Image.network(data!.image!.src.toString(),
                         fit: BoxFit.cover),
               ),

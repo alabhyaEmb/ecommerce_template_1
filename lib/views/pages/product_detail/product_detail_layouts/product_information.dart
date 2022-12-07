@@ -14,7 +14,7 @@ class ProductInformation extends StatelessWidget {
           ProductDetailWidget().commonText(
               text: productCtrl.productNewModel!.name.toString().tr,
               fontSize: FontSizes.f16),
-          ProductDetailWidget().descriptionText(
+          ProductDetailWidget().htmlDescription(
               productCtrl.productNewModel!.description.toString().tr),
           //rating layout
           const RatingLayout(),

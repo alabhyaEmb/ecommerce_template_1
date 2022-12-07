@@ -1,6 +1,7 @@
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:multikart/config.dart';
+import 'package:multikart/services/api_service.dart';
 
 class LoginController extends GetxController {
   final appCtrl = Get.isRegistered<AppController>()
@@ -16,7 +17,9 @@ class LoginController extends GetxController {
   bool isBack = false;
   final FocusNode emailFocus = FocusNode();
   final FocusNode passwordFocus = FocusNode();
+  ApiService apiService = ApiService();
   bool passwordVisible = true;
+  bool showError = false;
   // var auth = FirebaseAuth.instance;
   final storage = GetStorage();
 

@@ -1,4 +1,5 @@
 import 'package:get_storage/get_storage.dart';
+import 'package:multikart/models/product_new_model.dart';
 import 'package:multikart/views/bottom_navigate_page/cart/cart.dart';
 import 'package:multikart/views/bottom_navigate_page/category/category.dart';
 import 'package:multikart/views/bottom_navigate_page/home/home.dart';
@@ -54,6 +55,17 @@ class AppController extends GetxController {
     isHeart = true;
     update();
     Get.toNamed(routeName.productDetail);
+  }
+
+  goToProductArgDetail(ProductNewModel data) {
+    isNotification = false;
+    isSearch = false;
+    isCart = true;
+    isShare = true;
+    isHeart = true;
+    update();
+    Get.toNamed(routeName.productDetail,
+        arguments: data, preventDuplicates: false);
   }
 
   //go to shop page

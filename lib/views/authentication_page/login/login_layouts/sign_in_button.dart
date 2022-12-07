@@ -2,12 +2,14 @@ import '../../../../config.dart';
 
 class SignInButton extends StatelessWidget {
   final GestureTapCallback? onTap;
-  const SignInButton({Key? key, this.onTap}) : super(key: key);
+  final String title;
+  const SignInButton({Key? key, this.onTap, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CustomButton(
-      title: LoginFont().signInCapital,
+      title: title.toUpperCase(),
       onTap: onTap,
     );
   }

@@ -21,7 +21,7 @@ class SplashController extends GetxController {
     //#region set Language
     String? languageCode = storage.read(Session.languageCode);
     String? countryCode = storage.read(Session.countryCode);
-    bool? isLogin = false;
+    bool? isLogin = storage.read(Session.isLogin);
 
     // storage.read(Session.isLogin);
     if (languageCode != null && countryCode != null) {
@@ -37,6 +37,7 @@ class SplashController extends GetxController {
     //  final User? user = auth.currentUser;
     log(isIntro.toString());
     if (isIntro.toString() == "false") {
+      storage.write(Session.isIntro, "true");
       Get.toNamed(routeName.onBoarding);
     } else {
       //  log(user.toString());

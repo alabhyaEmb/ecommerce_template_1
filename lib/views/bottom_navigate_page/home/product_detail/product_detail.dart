@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import '../../../../config.dart';
 
 class ProductDetail extends StatelessWidget {
-  final productCtrl =
-      Get.put(ProductDetailController(productNewModel: Get.arguments));
+  final productCtrl = Get.put(ProductDetailController());
 
   ProductDetail({Key? key}) : super(key: key);
 
